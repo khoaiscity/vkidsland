@@ -1,0 +1,101 @@
+/* ---- Header Nav Bar ---- */
+.is-transparent .header-main {
+    position: absolute !important;
+}
+
+.header-main {
+    padding: 1px 0;
+    transition: all .4s;
+}
+
+.is-transparent .header-main,
+.header-main.scrolled {
+    width: 100%;
+    z-index: 49;
+}
+
+.header-main.scrolled {
+    position: fixed !important;
+    /* background: rgba(1, 1, 1, 0.5); */
+    /* box-shadow: 0 0 20px 0 rgba(18, 24, 58, 0.08); */
+}
+
+.header-main:hover {
+    background: rgba(1, 1, 1, 0.5);
+    box-shadow: 0 0 20px 0 rgba(18, 24, 58, 0.08);
+}
+
+.header-container {
+    padding: 0 4em 0 4em;
+}
+
+.dropdown-toggle.language::after {
+    display: none;
+}
+
+.navbar {
+    letter-spacing: .1rem;
+}
+
+.navbar-bg {
+    background-color: transparent !important;
+}
+
+.navbar-nav .dropdown-menu {
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 20px 0 rgba(18, 24, 58, 0.08);
+}
+
+.nav-border-right {
+    list-style: none;
+    display: inline-block;
+    border-right: 2px solid #fff;
+    line-height: 5px;
+}
+
+.navbar-nav .dropdown-menu,
+.dropdown-item {
+    color: #fff;
+}
+
+.navbar-nav .dropdown-menu>a {
+    padding: 10px 18px;
+}
+
+.nav-item a:hover {
+    color: #1EB126 !important;
+}
+
+li.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.fa-bars {
+    color: #fff;
+    font-size: 25px !important;
+}
+
+.dropdown-menu {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.vkid-logo {
+    width: 290px;
+}
+
+@media (max-width: 992px) {
+    .vkid-logo {
+        width: 250px;
+    }
+
+    .nav-border-right {
+        border-right: none;
+    }
+
+    .header-container {
+        padding: 0;
+    }
+}

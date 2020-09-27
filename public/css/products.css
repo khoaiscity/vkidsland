@@ -1,0 +1,163 @@
+.banner-title img {
+    width: 300px;
+}
+
+.vschool-details h2 {
+    font-weight: 900;
+}
+
+.vschool-details p {
+    line-height: 1.8rem;
+}
+
+.vschool-caption p {
+    line-height: 2.2rem;
+}
+
+.syllabus-section {
+    padding: 30px 0 100px;
+}
+
+.syllabus-header {
+    padding: 50px 0;
+}
+
+.syllabus-header h1 {
+    font-weight: 700;
+    color: #1EB126;
+}
+
+.explore-section {
+    /* padding: 100px 0; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.explore-header h1 {
+    font-weight: 700;
+    color: #fff;
+}
+
+/*------ Testimonials Section -----*/
+.testimonials-section {
+    padding: 120px 0px 150px;
+}
+
+.parent-comment h5 {
+    font-weight: 600;
+}
+
+.student-comment h5 {
+    font-weight: 600;
+}
+
+.testimonials-comment span {
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.testimonial-img {
+    border-radius: 50%;
+    width: 250px;
+}
+
+.testimonial-prev.carousel-control-prev,
+.testimonial-next.carousel-control-next {
+    filter: invert(100%);
+}
+
+.testimonial-prev .carousel-control-prev-icon {
+    background-image: url(../assets/icons/left-arrow.png);
+    width: 50px;
+    height: 50px;
+}
+
+.testimonial-next .carousel-control-next-icon {
+    background-image: url(../assets/icons/right-arrow.png);
+    width: 50px;
+    height: 50px;
+}
+
+.address-header img {
+    width: 250px;
+}
+
+.headquater-content h2 {
+    color: #1EB126;
+    font-weight: 700 !important;
+}
+
+.branch-content h2 {
+    color: #1EB126;
+    font-weight: 700 !important;
+}
+
+/*---- Nav Tab ----*/
+
+.tabs {
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.tabs .tab-navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.tabs .tab-navigation .tab-button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.tabs .tab-navigation .tab-button:focus {
+    background: none;
+}
+
+.tabs .tab-navigation .tab-button.js-active {
+    border-bottom: 3px solid #fff;
+}
+
+.tabs .tab-content {
+    display: none;
+    margin-top: 1.5em;
+}
+
+.tabs .tab-content.js-active {
+    display: block;
+}
+
+.tab-navigation ul li a {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.tab-navigation ul li a:hover {
+    color: #fff !important;
+    border-bottom: 3px solid #fff;
+}
+
+@media (max-width: 992px) {
+    .partner-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .partner-info {
+        padding-top: 20px;
+    }
+
+    .partner-info h3 {
+        font-weight: 800;
+        font-size: 1rem;
+    }
+
+    .partner-info p {
+        font-size: 0.8rem;
+    }
+}

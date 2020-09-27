@@ -1,0 +1,507 @@
+/* ---- global style ---- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+body {
+    font-size: 0.85rem;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #1EB126;
+}
+
+a:focus {
+    outline: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border-top: 8px solid #1EB126;
+    width: 70px;
+}
+
+.hw {
+    border-top: 8px solid #fff;
+    width: 80px;
+    margin: auto;
+}
+
+::placeholder {
+    color: #6C6C6C;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    transition: transform 0.3s;
+}
+
+button:hover {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(1.05);
+}
+
+
+/* ---- font-weight / size---- */
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-weight-800 {
+    font-weight: 800;
+}
+
+.font-weight-900 {
+    font-weight: 900;
+}
+
+.patner-header-text {
+    font-size: 2.2rem;
+}
+
+.font-09 {
+    font-size: 0.9rem;
+}
+
+.font-1 {
+    font-size: 1rem;
+}
+
+.font-2 {
+    font-size: 1.5rem;
+}
+
+/* ----  bg-theme ---- */
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-green {
+    background-color: #1EB126;
+}
+
+.bg-grey {
+    background-color: #EBEBEB;
+}
+
+.bg-getintouch {
+    background: url(../assets/images/get-in-touch.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.bg-about-us {
+    background: url(../assets/images/about-company/about-us-banner.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-partner1 {
+    background: url(../assets/images/dr_vivian/cover-dr-vivian.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-partner2 {
+    background: url(../assets/images/dr_denise/cover-dr-denise.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-partner3 {
+    background: url(../assets/images/dr_eric/cover-dr-eric.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-product-banner {
+    background: url(../assets/images/products-banner.png) center center no-repeat;
+    background-size: cover;
+}
+
+.bg-explore {
+    background: url(../assets/images/explore-more.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-contact {
+    background: url(../assets/images//contact/cover-banner.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bg-getintouch-parallax {
+    background: url(../assets/images/contact/contact-get-in-touch.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+/* ----  color ---- */
+
+.white {
+    color: #FFFFFF !important;
+}
+
+.black {
+    color: #000000;
+}
+
+.text-footer-sub-color {
+    color: #96a8b6 !important;
+}
+
+.green {
+    color: #1EB126;
+}
+
+/* ---- button ---- */
+
+.default-btn {
+    background: #1EB126;
+    border: none;
+    padding: 15px 30px;
+}
+
+.style1-btn {
+    z-index: 3;
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+}
+
+.style-link-btn {
+    z-index: 3;
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+}
+
+.style2-btn {
+    background: #fff;
+    border-radius: 50px;
+    border: none;
+    color: #000 !important;
+    font-weight: bold;
+    padding: 15px 30px;
+}
+
+.style1-btn:hover {
+    background: #fff;
+    color: #1EB126 !important;
+}
+
+.style2-btn:hover {
+    background: #000;
+    color: #fff !important;
+}
+
+.btn-floating {
+    cursor: pointer;
+}
+
+.btn-video {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* ---- icons ---- */
+
+.icon-fb {
+    width: 50px;
+}
+
+.icon-fb-footer {
+    width: 40px;
+}
+
+.icon-language {
+    background: url(../assets/icons/icon-language.svg);
+    height: 30px;
+    width: 30px;
+    display: block;
+}
+
+.icon-personal-acc {
+    background: url(../assets/icons/icon-account.svg);
+    height: 30px;
+    width: 30px;
+    display: block;
+}
+
+.icon-phone {
+    background: url(../assets/icons/smartphone.png) center center no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 11px;
+    display: block;
+}
+
+.icon-whatsapp {
+    background: url(../assets/icons/whatsapp.png) center center no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.icon-phone-white {
+    background: url(../assets/icons/smartphone-white.png) center center no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 11px;
+    display: block;
+}
+
+.icon-whatsapp-white {
+    background: url(../assets/icons/whatsapp-white.png) center center no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+/* ---- form ---- */
+.contact-form input,
+textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.contact-form input {
+    height: 50px;
+    font-weight: 100;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 50px 0 30px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    padding: 20px 30px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+/* ---- custom padding / spacing/ Line height ---- */
+
+.ptb-50 {
+    padding: 50px 0;
+}
+
+.ptb-100 {
+    padding: 100px 0;
+}
+
+.ptb-150 {
+    padding: 150px 0;
+}
+
+.p-7-5 {
+    padding: 70px 50px 70px 50px;
+}
+
+.line-hg-1 {
+    line-height: 1.8rem;
+}
+
+.line-hg-2 {
+    line-height: 2rem;
+}
+
+.line-hg-3 {
+    line-height: 2.7rem;
+}
+
+/* Banner Section */
+
+.banner-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    width: 100%;
+}
+
+.banner-title h1 {
+    font-weight: 700;
+    font-size: 5rem;
+}
+
+.banner-title h2 {
+    font-weight: 700;
+    font-size: 3.8rem;
+}
+
+.banner-title h3 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.banner-title p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.banner-title .banner-caption1 {
+    font-size: 0.9rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* ---- Map Canvas ---- */
+.map-canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.map-canvas iframe {
+    height: 100%;
+    width: 100%;
+}
+
+/* ---- Footer ---- */
+
+footer {
+    background: #000000;
+}
+
+footer .reserved {
+    color: #6F6F6F;
+}
+
+/* ---- Scrolltop ---- */
+
+.scrolltotop {
+    border: 2px solid #a9a9a9;
+    border-radius: 50%;
+    bottom: 40px;
+    color: #a9a9a9;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    height: 30px;
+    text-align: center;
+    position: fixed;
+    right: 50px;
+    width: 30px;
+    z-index: 999;
+}
+
+@media (max-width: 767px) {
+    .bg-about-us {
+        background-attachment: initial;
+    }
+
+    .bg-partner1 {
+        background-attachment: initial;
+    }
+
+    .bg-partner2 {
+        background-attachment: initial;
+    }
+
+    .bg-partner3 {
+        background-attachment: initial;
+    }
+
+    .bg-explore {
+        background-attachment: initial;
+    }
+
+    .bg-contact {
+        background-attachment: initial;
+    }
+
+    .bg-getintouch-parallax {
+        background-attachment: initial;
+    }
+}
+
+@media (max-width: 992px) {
+    .banner-title h1 {
+        font-size: 3rem;
+    }
+
+    .banner-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .banner-title p {
+        font-size: 1rem;
+    }
+
+    .bg-partner1 {
+        background: url(../assets/images/dr_vivian/cover-dr-vivian-mobile.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .bg-partner2 {
+        background: url(../assets/images/dr_denise/cover-dr-denise-mobile.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .bg-partner3 {
+        background: url(../assets/images/dr_eric/cover-dr-eric-mobile.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .bg-product-banner {
+        background-position: left;
+    }
+
+    .map-canvas {
+        height: 600px;
+    }
+
+    .bg-getintouch {
+        background: #fff;
+        /* background-size: cover; */
+    }
+}
+
+/* End of global style */

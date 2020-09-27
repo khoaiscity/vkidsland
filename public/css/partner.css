@@ -1,0 +1,29 @@
+.partner-info {
+    padding-top: 40px;
+}
+
+.partner-info p {
+    font-size: 1rem;
+}
+
+.border-box {
+    border: 1px solid #EBEBEB;
+}
+
+@media (max-width: 992px) {
+    .partner-details h2 {
+        font-size: 1.8rem;
+    }
+
+    .partner-info {
+        padding-top: 20px;
+    }
+
+    .partner-info h3 {
+        font-size: 1rem;
+    }
+
+    .partner-info p {
+        font-size: 0.8rem;
+    }
+}

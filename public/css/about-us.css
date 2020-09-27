@@ -1,0 +1,111 @@
+.about-us-info-section {
+    padding: 30px 0 100px;
+}
+
+.field-container {
+    margin: 1em 0;
+    border: 5px solid #1EB126;
+    border-radius: 5px;
+    padding: .35em .625em 2em;
+}
+
+legend {
+    margin-bottom: 0 !important;
+    max-width: fit-content;
+    border-bottom: none !important;
+}
+
+.abt-section {
+    font-weight: 800;
+    font-size: 3rem;
+    color: black;
+    margin-top: 5px;
+    padding: 10px 60px;
+}
+
+.abt-content {
+    height: 250px;
+    align-items: center;
+    padding: 30px;
+}
+
+.code-value-section {
+    padding: 30px 0 100px;
+}
+
+.code-value-header {
+    padding: 50px 0;
+}
+
+.code-value-header h1 {
+    font-weight: 700;
+    color: #1EB126;
+}
+
+.code-container-1 {
+    background: url(../assets/images/code-value1.png) center center no-repeat;
+    background-size: cover;
+}
+
+.code-container-2 {
+    background: url(../assets/images/code-value2.png) center center no-repeat;
+    background-size: cover;
+}
+
+.code-container-3 {
+    background: url(../assets/images/code-value3.png) center center no-repeat;
+    background-size: cover;
+}
+
+.code-container-4 {
+    background: url(../assets/images/code-value4.png) center center no-repeat;
+    background-size: cover;
+}
+
+.code-content {
+    height: 350px;
+    align-items: center;
+}
+
+.code-content {
+    width: 100%;
+}
+
+.code-details img {
+    width: 80px;
+}
+
+.code-details p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 992px) {
+    .about-us-title h1 {
+        font-weight: 700;
+        color: #fff;
+        font-size: 2.5rem;
+    }
+
+    .about-us-title p {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .code-content {
+        height: 225px;
+    }
+
+    .code-details img {
+        width: 60px;
+    }
+
+    .code-details p {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+
+    .abt-content {
+        height: 100px;
+    }
+}

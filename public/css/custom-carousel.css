@@ -1,0 +1,132 @@
+/*----- Custom Carousel -----*/
+
+.carousel .carousel-item .carousel-image {
+  height: 100vh;
+  background-size: cover !important;
+}
+
+.carousel-inner .slideimg1 {
+  background: url(../assets/images/main-banner/banner01.jpg) no-repeat center
+    center fixed;
+}
+
+.carousel-inner .slideimg2 {
+  background: url(../assets/images/main-banner/banner02.jpg) no-repeat center
+    center fixed;
+}
+
+.carousel-inner .slideimg3 {
+  background: url(../assets/images/main-banner/banner03.jpg) no-repeat center
+    center fixed;
+}
+
+.carousel-inner .prdslideimg1 {
+  background: url(../assets/images/products/banner-vschool-01.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .prdslideimg2 {
+  background: url(../assets/images/products/banner-vschool-02.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .prdslideimg3 {
+  background: url(../assets/images/products/banner-vschool-03.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .prdslideimg4 {
+  background: url(../assets/images/products/banner-vschool-04.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .prdslideimg5 {
+  background: url(../assets/images/products/banner-vschool-05.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .prdslideimg6 {
+  background: url(../assets/images/products/banner-vschool-06.jpg) no-repeat
+    center center fixed;
+}
+
+.carousel-inner .awardV1 {
+  background: url(../assets/images/video/award/2/vkids-trend2nd-anni-final.jpg)
+    no-repeat center center;
+}
+
+.carousel-inner .awardV2 {
+  background: url(../assets/images/video/award/3/vkids-trend-night.jpg)
+    no-repeat center center;
+}
+
+.carousel-inner .awardV3 {
+  background: url(../assets/images/video/award/4/vschool-kiddos-recognition-2018.jpg)
+    no-repeat center center;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.carousel-indicators .active {
+  background-color: #000;
+}
+
+.carousel-caption {
+  top: 85%;
+  bottom: auto;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.caption-head h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+}
+
+.banner-prev .carousel-control-prev-icon {
+  background-image: url(../assets/icons/arrow-slider-left-white.svg);
+  width: 50px;
+  height: 50px;
+}
+
+.banner-next .carousel-control-next-icon {
+  background-image: url(../assets/icons/arrow-slider-right-white.svg);
+  width: 50px;
+  height: 50px;
+}
+
+.ambassador-prev .carousel-control-prev-icon {
+  background-image: url(../assets/icons/arrow-slider-left-white.svg);
+  width: 50px;
+  height: 50px;
+}
+
+.ambassador-next .carousel-control-next-icon {
+  background-image: url(../assets/icons/arrow-slider-right-white.svg);
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-image {
+    background-attachment: initial;
+  }
+}
