@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function Home() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-  const apiURL = 'https://139.162.39.241:8002';
+  const apiURL = 'http://localhost:8002';
 
   const [headerSlider, setHeaderSlider] = useState(null);
   const [mainVideo, setMainVideo] = useState(null);
