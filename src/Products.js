@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default function Products() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-  const apiURL = process.env.REACT_APP_PUBLIC_URL;
+  const apiURL = 'http://localhost:8002';
 
   const [mainVideo, setMainVideo] = useState(null);
   const [slider, setSlider] = useState(null);
