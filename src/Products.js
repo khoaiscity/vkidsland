@@ -1,36 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 export default function Products() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-  const apiURL = process.env.REACT_APP_PUBLIC_URL;
 
   const [mainVideo, setMainVideo] = useState(null);
   const [slider, setSlider] = useState(null);
 
   useEffect(() => {
     if (mainVideo === null) {
-      axios.get(`${apiURL}/api/intro-video?page=product`).then((res) => {
-        if (res.status === 200) {
-          const { data } = res.data;
-          if (data && data.length) {
-            setMainVideo(data[0]);
+      fetch('/api/intro-video?page=product')
+        .then((response) => response.json())
+        .then((res) => {
+          if (res.status === 200) {
+            const { data } = res.data;
+            if (data && data.length) {
+              setMainVideo(data[0]);
+            }
           }
-        }
-      });
+        });
     }
   }, [mainVideo]);
 
   useEffect(() => {
     if (slider === null) {
-      axios.get(`${apiURL}/api/slider?page=product`).then((res) => {
-        if (res.status === 200) {
-          const { data } = res.data;
-          if (data && data.length) {
-            setSlider(data);
+      fetch('/api/slider?page=product')
+        .then((response) => response.json())
+        .then((res) => {
+          if (res.status === 200) {
+            const { data } = res.data;
+            if (data && data.length) {
+              setSlider(data);
+            }
           }
-        }
-      });
+        });
     }
   }, [slider]);
 
@@ -164,6 +166,7 @@ export default function Products() {
                 <a
                   href='https://www.vschooltrend.com'
                   className='style1-btn px-5 py-3'
+                  rel='noopener noreferrer'
                   target='_blank'
                 >
                   Find Out More
