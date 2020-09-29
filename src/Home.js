@@ -17,22 +17,15 @@ function Home() {
 
   useEffect(() => {
     if (mainVideo === null) {
-      fetch('/api/slider?page=home&key=intro-video')
+      fetch('/api/intro-video?page=home')
         .then((response) => response.json())
-        .then((res) => {
-          if (res.status === 200) {
-            const { data } = res.data;
-            if (data && data.length) {
-              setMainVideo(data[0]);
-            }
-          }
-        });
+        .then((response) => setMainVideo(response.data[0]));
     }
   }, [mainVideo]);
 
   useEffect(() => {
     if (introVideos === null) {
-      fetch('/api/intro-video?page=home')
+      fetch('/api/slider?page=home&key=intro-video')
         .then((response) => response.json())
         .then((response) => setIntroVideos(response.data));
     }
