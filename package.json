@@ -19,6 +19,7 @@
         "react-scripts": "3.4.3",
         "react-app-env": "^1.2.3"
     },
+    "proxy": "https://reqres.in/api/users?page=2",
     "scripts": {
         "start": "PORT=3003 react-scripts start",
         "server": "node app.js",
