@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 function Home() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
@@ -6,6 +6,8 @@ function Home() {
   const [headerSlider, setHeaderSlider] = useState(null);
   const [mainVideo, setMainVideo] = useState(null);
   const [introVideos, setIntroVideos] = useState(null);
+  const [hallOfFame, setHallOfFame] = useState(null);
+  const [ourProduct, setOurPoduct] = useState(null);
 
   useEffect(() => {
     if (headerSlider === null) {
@@ -31,6 +33,22 @@ function Home() {
     }
   }, [introVideos]);
 
+  useEffect(() => {
+    if (introVideos === null) {
+      fetch('/api/slider?page=home&key=hall-of-fame')
+        .then((response) => response.json())
+        .then((response) => setHallOfFame(response.data));
+    }
+  }, [hallOfFame]);
+
+  useEffect(() => {
+    if (introVideos === null) {
+      fetch('/api/slider?page=home&key=our-product')
+        .then((response) => response.json())
+        .then((response) => setOurPoduct(response.data));
+    }
+  }, [ourProduct]);
+
   return (
     <>
       {headerSlider && (
@@ -52,24 +70,23 @@ function Home() {
             </ol>
 
             <div className='carousel-inner'>
-              {headerSlider &&
-                headerSlider.map((item, index) => (
+              {headerSlider && headerSlider.map((item, index) => (
+                <div
+                  className={`carousel-item ${index === 0 ? 'active' : ''}`}
+                  key={item.ID}
+                >
                   <div
-                    className={`carousel-item ${index === 0 ? 'active' : ''}`}
-                    key={item.ID}
-                  >
-                    <div
-                      className='carousel-image'
-                      style={{
-                        background:
-                          'url(' +
-                          resourceURL +
-                          item.Path +
-                          ') no-repeat center center fixed',
-                      }}
-                    ></div>
-                  </div>
-                ))}
+                    className='carousel-image'
+                    style={{
+                      background:
+                        'url(' +
+                        resourceURL +
+                        item.Path +
+                        ') no-repeat center center fixed',
+                    }}
+                  ></div>
+                </div>
+              ))}
             </div>
 
             <div className='carousel-caption'>
@@ -114,7 +131,7 @@ function Home() {
             <div className='col-12 col-lg-3 pb-3'>
               <div className='text-uppercase text-left black pb-3'>
                 <h2 className='font-weight-900 pt-4'>About Company</h2>
-                <hr />
+                <hr/>
                 <p className='line-hg-2 pt-2'>
                   Maximize the Power of Internet Technology together with
                   Education.
@@ -173,7 +190,7 @@ function Home() {
             <div className='col-12 col-lg-3'>
               <div className='text-uppercase text-left black pb-2'>
                 <h2 className='font-weight-900 pt-4'>Management Team</h2>
-                <hr />
+                <hr/>
                 <p className='line-hg-2 font-09'>
                   An internet based education business company leading by the
                   outstanding management team which provides a platform for
@@ -275,76 +292,38 @@ function Home() {
       </section>
 
       {/* Our Product */}
-      <section className='product-bg-parallax products-section full-height'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div className='products-section-header text-center text-uppercase'>
-                <h1>Our Products</h1>
-                <hr style={{ margin: 'auto' }} />
+      {ourProduct && ourProduct.length && (
+        <section className='product-bg-parallax products-section full-height'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className='products-section-header text-center text-uppercase'>
+                  <h1>Our Products</h1>
+                  <hr style={{margin: 'auto'}}/>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='product-slider'>
-            <div className='card-container'>
-              <a
-                href='https://www.vschooltrend.com/'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <div className='product-card pb-5'>
-                  <img
-                    src='assets/images/vschool-pre-school.jpg'
-                    alt='Product 1'
-                  />
+            <div className='product-slider'>
+              {ourProduct.map((item, index) => (
+                <div className='card-container'>
+                  <a
+                    href='https://www.vschooltrend.com/'
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    <div className='product-card pb-5'>
+                      <img
+                        src={resourceURL + item.Path}
+                        alt='Product'
+                      />
+                    </div>
+                  </a>
                 </div>
-              </a>
-            </div>
-            <div className='card-container'>
-              <a
-                href='https://www.vschooltrend.com/'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <div className='product-card pb-5'>
-                  <img
-                    src='assets/images/vschool-sjkc-syllabus.jpg'
-                    alt='Product 2'
-                  />
-                </div>
-              </a>
-            </div>
-            <div className='card-container'>
-              <a
-                href='https://www.vschooltrend.com/'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <div className='product-card pb-5'>
-                  <img
-                    src='assets/images/vschool-sk-syllabus.jpg'
-                    alt='Product 3'
-                  />
-                </div>
-              </a>
-            </div>
-            <div className='card-container'>
-              <a
-                href='https://www.vschooltrend.com/'
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <div className='product-card pb-5'>
-                  <img
-                    src='assets/images/vschool-smk-syllabus.jpg'
-                    alt='Product 4'
-                  />
-                </div>
-              </a>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Awards & Recognition */}
       <section className='awards-section full-height'>
@@ -353,7 +332,7 @@ function Home() {
             <div className='col-lg-12'>
               <div className='awards-section-header text-center text-uppercase'>
                 <h1>Awards & Recognition</h1>
-                <hr style={{ margin: 'auto' }} />
+                <hr style={{margin: 'auto'}}/>
               </div>
             </div>
           </div>
@@ -373,7 +352,7 @@ function Home() {
                             <div className='py- awards-header'>
                               <h5 className='font-weight-bold'>
                                 PREMIUM INTERNATIONAL BUSINESS AWARD 2017
-                                <br />
+                                <br/>
                                 (FOR THE OUTSTANDING OF VSCHOOL TREND LEARNING
                                 PROGRAM)
                               </h5>
@@ -382,7 +361,7 @@ function Home() {
                             <div className='awards-content'>
                               <span>
                                 BY TENGKU LAKSAMANA KELANTAN
-                                <br />
+                                <br/>
                                 (PATRON HIS HIGHNESS TENGKU ADBUL HALIM IBNI
                                 ALMARHUM SULTAN IBRAHIM)
                               </span>
@@ -451,7 +430,7 @@ function Home() {
                             <div className='py-4 awards-header'>
                               <h5 className='font-weight-bold'>
                                 ASIA PACIFIC TOP EXCELLENCE BRAND
-                                <br />
+                                <br/>
                                 (EMERGING ENTERPRISE 2018/ 2019)
                               </h5>
                             </div>
@@ -699,33 +678,32 @@ function Home() {
       </div>
 
       {/* Reward Modal */}
-      {introVideos &&
-        introVideos.length &&
-        introVideos.map((item, index) => (
-          <div
-            key={index}
-            className={'modal fade reward-modal-lg-0' + index}
-            tabIndex='-1'
-            role='dialog'
-            aria-labelledby='myLargeModalLabel'
-            aria-hidden='true'
-          >
-            <div className='modal-dialog modal-lg'>
-              <div className='modal-content'>
-                <video
-                  poster={resourceURL + item.Cover}
-                  id='player06'
-                  playsInline
-                  controls
-                >
-                  <source src={resourceURL + item.Path} type='video/mp4' />
-                </video>
-              </div>
+      {introVideos && introVideos.length && introVideos.map((item, index) => (
+        <div
+          key={index}
+          className={'modal fade reward-modal-lg-0' + index}
+          tabIndex='-1'
+          role='dialog'
+          aria-labelledby='myLargeModalLabel'
+          aria-hidden='true'
+        >
+          <div className='modal-dialog modal-lg'>
+            <div className='modal-content'>
+              <video
+                poster={resourceURL + item.Cover}
+                id='player06'
+                playsInline
+                controls
+              >
+                <source src={resourceURL + item.Path} type='video/mp4'/>
+              </video>
             </div>
           </div>
-        ))}
+        </div>
+      ))}
 
       {/* Hall of fame */}
+
       <section className='ambassador-section bg-green full-height'>
         <div className='ambassador-container'>
           <div className='container'>
@@ -749,7 +727,7 @@ function Home() {
                 </div>
                 <p className='white'>
                   LEGENDARY CIRCLE
-                  <br />
+                  <br/>
                   <span>REMY & DERLIN</span>
                 </p>
               </div>
@@ -763,7 +741,7 @@ function Home() {
                 </div>
                 <p className='white'>
                   LEGENDARY CIRCLE
-                  <br />
+                  <br/>
                   <span>PINKY & YAP</span>
                 </p>
               </div>
@@ -777,7 +755,7 @@ function Home() {
                 </div>
                 <p className='white'>
                   LEGENDARY CIRCLE
-                  <br />
+                  <br/>
                   <span>ALAN & CINDY</span>
                 </p>
               </div>
@@ -791,7 +769,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   LEGENDARY Ambassador Club
-                  <br />
+                  <br/>
                   <span>KELLY ONG</span>
                 </p>
               </div>
@@ -805,7 +783,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Royal Ambassador Club
-                  <br />
+                  <br/>
                   <span>David & Janicer</span>
                 </p>
               </div>
@@ -819,7 +797,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Royal Ambassador Club
-                  <br />
+                  <br/>
                   <span>Krystle & Sean</span>
                 </p>
               </div>
@@ -833,7 +811,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Royal Ambassador Club
-                  <br />
+                  <br/>
                   <span>Ethan & Vikki</span>
                 </p>
               </div>
@@ -847,7 +825,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Royal Ambassador Club
-                  <br />
+                  <br/>
                   <span>Vicky & Andy</span>
                 </p>
               </div>
@@ -861,7 +839,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Royal Ambassador Club
-                  <br />
+                  <br/>
                   <span>Jes Tan</span>
                 </p>
               </div>
@@ -875,7 +853,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Star Ambassador Club
-                  <br />
+                  <br/>
                   <span>Teoh Wey Yi</span>
                 </p>
               </div>
@@ -889,7 +867,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Star Ambassador Club
-                  <br />
+                  <br/>
                   <span>Jen Chun Kiat</span>
                 </p>
               </div>
@@ -903,7 +881,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Star Ambassador Club
-                  <br />
+                  <br/>
                   <span>Lim Lea Shuan</span>
                 </p>
               </div>
@@ -917,7 +895,7 @@ function Home() {
                 </div>
                 <p className='white text-uppercase'>
                   Star Ambassador Club
-                  <br />
+                  <br/>
                   <span>Jane Ang</span>
                 </p>
               </div>
@@ -926,7 +904,7 @@ function Home() {
             <div className='ribbon-container text-center'>
               <div className='pt-5'>
                 <p className='pb-1'>Let’s join VKids Trend big family.</p>
-                <br />
+                <br/>
                 <a className='style-link-btn' href='#contact-us-section'>
                   Join us
                 </a>
@@ -940,27 +918,27 @@ function Home() {
         <div className='container'>
           <div className='video-award-slider'>
             {introVideos &&
-              introVideos.length &&
-              introVideos.map((item, index) => (
-                <div className='card-container' key={index}>
-                  <a
-                    href='https://www.vschooltrend.com/'
-                    data-toggle='modal'
-                    data-target={'.reward-modal-lg-0' + index}
+            introVideos.length &&
+            introVideos.map((item, index) => (
+              <div className='card-container' key={index}>
+                <a
+                  href='https://www.vschooltrend.com/'
+                  data-toggle='modal'
+                  data-target={'.reward-modal-lg-0' + index}
+                >
+                  <div
+                    className='product-card'
+                    style={{position: 'relative'}}
                   >
-                    <div
-                      className='product-card'
-                      style={{ position: 'relative' }}
-                    >
-                      <img src={resourceURL + item.Cover} alt='video award 2' />
-                      <div className='videoplay-overlay'>
-                        <i className='video_play fa fa-play'></i>
-                      </div>
+                    <img src={resourceURL + item.Cover} alt='video award 2'/>
+                    <div className='videoplay-overlay'>
+                      <i className='video_play fa fa-play'></i>
                     </div>
-                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>{item.Title}</h1>
-                  </a>
-                </div>
-              ))}
+                  </div>
+                  <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>{item.Title}</h1>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -973,14 +951,14 @@ function Home() {
               <div className='address-component bg-white p-5'>
                 <div className='address-container text-center black'>
                   <div className='address-header pb-4'>
-                    <img src='assets/icons/vkid-logo-black.png' alt='VKid' />
-                    <hr style={{ margin: 'auto' }} />
+                    <img src='assets/icons/vkid-logo-black.png' alt='VKid'/>
+                    <hr style={{margin: 'auto'}}/>
                   </div>
                   <div className='headquater-content'>
                     <h2 className='text-uppercase'>HEADQUARTERS</h2>
                     <p>
                       25A, Jalan Kenari 2, Bandar Puchong Jaya,
-                      <br />
+                      <br/>
                       47100 Puchong, Selangor.
                     </p>
                   </div>
@@ -988,7 +966,7 @@ function Home() {
                     <h2 className='text-uppercase'>PENANG OFFICE</h2>
                     <p>
                       72-3-59, Arena Curve, Jalan Mahsuri,
-                      <br />
+                      <br/>
                       11950 Bayan Lepas, Penang.
                     </p>
                     <div className='contact-number d-inline-block '>
@@ -1035,9 +1013,9 @@ function Home() {
                   an email or even give us a call at 010-2775678
                 </p>
                 <div className='contact-form'>
-                  <input className='my-2' type='text' placeholder='Name*' />
-                  <input className='my-2' type='text' placeholder='Phone*' />
-                  <input className='my-2' type='text' placeholder='Email*' />
+                  <input className='my-2' type='text' placeholder='Name*'/>
+                  <input className='my-2' type='text' placeholder='Phone*'/>
+                  <input className='my-2' type='text' placeholder='Email*'/>
                   <textarea
                     className='my-2'
                     name='message'
