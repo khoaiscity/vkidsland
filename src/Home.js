@@ -703,216 +703,43 @@ function Home() {
       ))}
 
       {/* Hall of fame */}
-
-      <section className='ambassador-section bg-green full-height'>
-        <div className='ambassador-container'>
-          <div className='container'>
-            <div className='row'>
-              <div className='col-lg-12 py-5'>
-                <div className='ambassador-section-header text-center text-uppercase'>
-                  <h1 className='pb-2'>Hall of fame</h1>
-                  <div className='hw'></div>
+      {hallOfFame && hallOfFame.length && (
+        <section className='ambassador-section bg-green full-height'>
+          <div className='ambassador-container'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-lg-12 py-5'>
+                  <div className='ambassador-section-header text-center text-uppercase'>
+                    <h1 className='pb-2'>Hall of fame</h1>
+                    <div className='hw'></div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div className='slickAmbassador'>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    className='m-auto'
-                    src='assets/images/legendary/1-Legendary-Circle-Remy-and-Derlin.jpg'
-                    alt='REMY & DERLIN'
-                  />
-                </div>
-                <p className='white'>
-                  LEGENDARY CIRCLE
+              <div className='slickAmbassador'>
+                {hallOfFame.map((item, index) => (
+                  <div className='amd-content text-center'>
+                    <div className='amd-portrait'>
+                      <img
+                        className='m-auto'
+                        src={resourceURL + item.Path}
+                        alt='REMY & DERLIN'
+                      />
+                    </div>
+                    <p className='white'>{item.Title}</p>
+                  </div>
+                ))}
+              </div>
+              <div className='ribbon-container text-center'>
+                <div className='pt-5'>
+                  <p className='pb-1'>Let’s join VKids Trend big family.</p>
                   <br/>
-                  <span>REMY & DERLIN</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto'
-                    src='assets/images/legendary/2-Legendary-Circle-Pinky-Yap.jpg'
-                  />
+                  <a className='style-link-btn' href='#contact-us-section'>Join us</a>
                 </div>
-                <p className='white'>
-                  LEGENDARY CIRCLE
-                  <br/>
-                  <span>PINKY & YAP</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/3-Legendary-Circle-Alan-and-Cindy.jpg'
-                  />
-                </div>
-                <p className='white'>
-                  LEGENDARY CIRCLE
-                  <br/>
-                  <span>ALAN & CINDY</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/4-Legend-Ambassador-Club-Kelly-Ong.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  LEGENDARY Ambassador Club
-                  <br/>
-                  <span>KELLY ONG</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/5-Royal-Ambassador-Club-David-and-Janice.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Royal Ambassador Club
-                  <br/>
-                  <span>David & Janicer</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/6-Royal-Ambassador-Club-Krystle-and-Sean.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Royal Ambassador Club
-                  <br/>
-                  <span>Krystle & Sean</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/7-Royal-Ambassador-Club-Ethan-and-Vikki.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Royal Ambassador Club
-                  <br/>
-                  <span>Ethan & Vikki</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/8-Royal-Ambassador-Club-Vicky-and-Andy.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Royal Ambassador Club
-                  <br/>
-                  <span>Vicky & Andy</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/9-Royal-Ambassador-Club-Jes-Tan.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Royal Ambassador Club
-                  <br/>
-                  <span>Jes Tan</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/10-Star-Ambassador-Club-Teoh-Wey-Yi-.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Star Ambassador Club
-                  <br/>
-                  <span>Teoh Wey Yi</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/11-Star-Ambassador-Club-Jen-Chun-Kiat.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Star Ambassador Club
-                  <br/>
-                  <span>Jen Chun Kiat</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/12-Star-Ambassador-Club-Lim-Lea-Shuan.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Star Ambassador Club
-                  <br/>
-                  <span>Lim Lea Shuan</span>
-                </p>
-              </div>
-              <div className='amd-content text-center'>
-                <div className='amd-portrait'>
-                  <img
-                    alt=''
-                    className='m-auto m-auto'
-                    src='assets/images/legendary/13-Star-Ambassador-Club-Jane-Ang.jpg'
-                  />
-                </div>
-                <p className='white text-uppercase'>
-                  Star Ambassador Club
-                  <br/>
-                  <span>Jane Ang</span>
-                </p>
-              </div>
-            </div>
-
-            <div className='ribbon-container text-center'>
-              <div className='pt-5'>
-                <p className='pb-1'>Let’s join VKids Trend big family.</p>
-                <br/>
-                <a className='style-link-btn' href='#contact-us-section'>
-                  Join us
-                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className='video-award-bg-parallax products-section full-height'>
         <div className='container'>
