@@ -7,7 +7,9 @@ function Home() {
   const [mainVideo, setMainVideo] = useState(null);
   const [introVideos, setIntroVideos] = useState(null);
   const [hallOfFame, setHallOfFame] = useState(null);
-  const [ourProduct, setOurPoduct] = useState(null);
+  const [ourProduct, setOurProduct] = useState(null);
+  const [teamManager, setTeamManager] = useState(null);
+  const [award, setAward] = useState(null);
 
   useEffect(() => {
     if (headerSlider === null) {
@@ -45,9 +47,25 @@ function Home() {
     if (introVideos === null) {
       fetch('/api/slider?page=home&key=our-product')
         .then((response) => response.json())
-        .then((response) => setOurPoduct(response.data));
+        .then((response) => setOurProduct(response.data));
     }
   }, [ourProduct]);
+
+  useEffect(() => {
+    if (teamManager === null) {
+      fetch('/api/team-manager')
+        .then((response) => response.json())
+        .then((response) => setTeamManager(response.data));
+    }
+  }, [teamManager]);
+
+  useEffect(() => {
+    if (award === null) {
+      fetch('/api/award')
+        .then((response) => response.json())
+        .then((response) => setAward(response.data));
+    }
+  }, [award]);
 
   return (
     <>
