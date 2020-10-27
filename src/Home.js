@@ -36,7 +36,7 @@ function Home() {
   }, [introVideos]);
 
   useEffect(() => {
-    if (introVideos === null) {
+    if (hallOfFame === null) {
       fetch('/api/slider?page=home&key=hall-of-fame')
         .then((response) => response.json())
         .then((response) => setHallOfFame(response.data));
@@ -44,7 +44,7 @@ function Home() {
   }, [hallOfFame]);
 
   useEffect(() => {
-    if (introVideos === null) {
+    if (ourProduct === null) {
       fetch('/api/slider?page=home&key=our-product')
         .then((response) => response.json())
         .then((response) => setOurProduct(response.data));
