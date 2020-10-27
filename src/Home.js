@@ -217,94 +217,33 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className='col-12 col-lg-9'>
-              <div className='row'>
-                <div className='col-12 col-lg-4'>
-                  <div className='team-content'>
-                    <div className='team-content-overlay'></div>
-                    <img
-                      className='team-content-image'
-                      src='assets/images/team-member1-vivian.jpg'
-                      alt='Dr.Vivan Ker'
-                    />
-                    <div className='team-content-details fadeIn-bottom'>
-                      <h4 className='team-content-title font-weight-bold'>
-                        Dr.Vivan Ker
-                      </h4>
-                      <p className='team-content-text'>
-                        Chief Executive Officer (CEO)
-                      </p>
-                      <div className='hw'></div>
-                      <p className='team-content-info py-3'>
-                        Dr. Vivian is the highest executive in VKids Trend,
-                        whose primary responsibilities include making major
-                        corporate decisions, develop high quality business
-                        strategies and plans.
-                      </p>
-                      <a className='style1-btn' href='partner1.html'>
-                        Read More
-                      </a>
+            {teamManager && teamManager.length && (
+              <div className='col-12 col-lg-9'>
+                <div className='row'>
+                  {teamManager.map((item, index) => (
+                    <div className='col-12 col-lg-4'>
+                      <div className='team-content'>
+                        <div className='team-content-overlay'></div>
+                        <img
+                          className='team-content-image'
+                          src={resourceURL + item.HalfBodyPhoto}
+                          alt={item.Name}
+                        />
+                        <div className='team-content-details fadeIn-bottom'>
+                          <h4 className='team-content-title font-weight-bold'>{item.Name}</h4>
+                          <p className='team-content-text'>{item.Position}</p>
+                          <div className='hw'></div>
+                          <p className='team-content-info py-3'>{item.Intro}</p>
+                          <a className='style1-btn' href='partner1.html'>
+                            Read More
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div className='col-12 col-lg-4'>
-                  <div className='team-content'>
-                    <div className='team-content-overlay'></div>
-                    <img
-                      className='team-content-image'
-                      src='assets/images/team-member2-denise.jpg'
-                      alt='Dr.Denise Lim'
-                    />
-                    <div className='team-content-details fadeIn-bottom'>
-                      <h4 className='team-content-title font-weight-bold'>
-                        Dr.Denise Lim
-                      </h4>
-                      <p className='team-content-text'>
-                        Managing Director (MD)
-                      </p>
-                      <div className='hw'></div>
-                      <p className='team-content-info py-3'>
-                        Dr. Denise is the co-founder in VKids Trend developing
-                        and executing the company's business strategies.
-                        Building positive and trust-based relations with
-                        business partners and oversee the company’s financial
-                        performance.
-                      </p>
-                      <a className='style1-btn' href='partner2.html'>
-                        Read More
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-12 col-lg-4'>
-                  <div className='team-content'>
-                    <div className='team-content-overlay'></div>
-                    <img
-                      className='team-content-image'
-                      src='assets/images/team-member3-eric.jpg'
-                      alt='Dr.Eric Ang'
-                    />
-                    <div className='team-content-details fadeIn-bottom'>
-                      <h4 className='team-content-title font-weight-bold'>
-                        Dr.Eric Ang
-                      </h4>
-                      <p className='team-content-text'>
-                        Chief Operating Officer (COO)
-                      </p>
-                      <div className='hw'></div>
-                      <p className='team-content-info py-3'>
-                        Dr.Eric Ang is the co-founder in VKids Trend oversees
-                        the company's business operations. Design and implement
-                        business strategies, plans and procedures.
-                      </p>
-                      <a className='style1-btn' href='partner3.html'>
-                        Read More
-                      </a>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </section>
