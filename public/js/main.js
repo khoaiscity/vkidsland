@@ -35,44 +35,74 @@ function videoPlay($wrapper) {
 
 function videoPopup() {
     console.log('Ready');
-    var player01 = document.getElementById('player01');
-    $('.bd-example-modal-lg-01').on('hide.bs.modal', function (e) {
-        player01.pause();
+    var player0 = document.getElementById('player0');
+    $('.bd-example-modal-lg-0').on('hide.bs.modal', function (e) {
+        player0.pause();
     })
 
-    var player03 = document.getElementById('player03');
-    $('.bd-example-modal-lg-03').on('hide.bs.modal', function (e) {
-        player03.pause();
+    var player1 = document.getElementById('player1');
+    $('.bd-example-modal-lg-1').on('hide.bs.modal', function (e) {
+        player1.pause();
     })
 
-    var player04 = document.getElementById('player04');
-    $('.bd-example-modal-lg-04').on('hide.bs.modal', function (e) {
-        player04.pause();
+    var player2 = document.getElementById('player2');
+    $('.bd-example-modal-lg-2').on('hide.bs.modal', function (e) {
+        player2.pause();
     })
 
-    var player05 = document.getElementById('player05');
-    $('.bd-example-modal-lg-05').on('hide.bs.modal', function (e) {
-        player05.pause();
+    var player3 = document.getElementById('player3');
+    $('.bd-example-modal-lg-3').on('hide.bs.modal', function (e) {
+        player3.pause();
     })
 
-    var player06 = document.getElementById('player06');
-    $('.reward-modal-lg-01').on('hide.bs.modal', function (e) {
-        player06.pause();
+    // Slider of Intro Video up to 10 videos
+    var sliderPlayer0 = document.getElementById('slider-player0');
+    $('.reward-modal-lg-0').on('hide.bs.modal', function (e) {
+        sliderPlayer0.pause();
+    })
+    var sliderPlayer1 = document.getElementById('slider-player1');
+    $('.reward-modal-lg-1').on('hide.bs.modal', function (e) {
+        sliderPlayer1.pause();
     })
 
-    var player07 = document.getElementById('player07');
-    $('.reward-modal-lg-02').on('hide.bs.modal', function (e) {
-        player07.pause();
+    var sliderPlayer2 = document.getElementById('slider-player2');
+    $('.reward-modal-lg-2').on('hide.bs.modal', function (e) {
+        sliderPlayer2.pause();
     })
 
-    var player08 = document.getElementById('player08');
-    $('.reward-modal-lg-03').on('hide.bs.modal', function (e) {
-        player08.pause();
+    var sliderPlayer3 = document.getElementById('slider-player3');
+    $('.reward-modal-lg-3').on('hide.bs.modal', function (e) {
+        sliderPlayer3.pause();
     })
 
-    var player09 = document.getElementById('player09');
-    $('.reward-modal-lg-04').on('hide.bs.modal', function (e) {
-        player09.pause();
+    var sliderPlayer4 = document.getElementById('slider-player4');
+    $('.reward-modal-lg-4').on('hide.bs.modal', function (e) {
+        sliderPlayer4.pause();
+    })
+
+    var sliderPlayer5 = document.getElementById('slider-player5');
+    $('.reward-modal-lg-5').on('hide.bs.modal', function (e) {
+        sliderPlayer5.pause();
+    })
+
+    var sliderPlayer6 = document.getElementById('slider-player6');
+    $('.reward-modal-lg-6').on('hide.bs.modal', function (e) {
+        sliderPlayer6.pause();
+    })
+
+    var sliderPlayer7 = document.getElementById('slider-player7');
+    $('.reward-modal-lg-7').on('hide.bs.modal', function (e) {
+        sliderPlayer7.pause();
+    })
+
+    var sliderPlayer8 = document.getElementById('slider-player8');
+    $('.reward-modal-lg-8').on('hide.bs.modal', function (e) {
+        sliderPlayer8.pause();
+    })
+
+    var sliderPlayer9 = document.getElementById('slider-player9');
+    $('.reward-modal-lg-9').on('hide.bs.modal', function (e) {
+        sliderPlayer9.pause();
     })
 }
 

@@ -283,362 +283,113 @@ function Home() {
       )}
 
       {/* Awards & Recognition */}
-      <section className='awards-section full-height'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div className='awards-section-header text-center text-uppercase'>
-                <h1>Awards & Recognition</h1>
-                <hr style={{margin: 'auto'}}/>
-              </div>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div
-                id='carouselExampleIndicators2'
-                className='carousel slide service'
-                data-ride='carousel'
-              >
-                <div className='carousel-inner'>
-                  <div className='carousel-item active'>
-                    <div className='row'>
-                      <div className='col-md-5 col-sm-12 pb-2'>
-                        <div className='bounceInLeft'>
-                          <div className='awards-section-content text-center black'>
-                            <div className='py- awards-header'>
-                              <h5 className='font-weight-bold'>
-                                PREMIUM INTERNATIONAL BUSINESS AWARD 2017
-                                <br/>
-                                (FOR THE OUTSTANDING OF VSCHOOL TREND LEARNING
-                                PROGRAM)
-                              </h5>
-                            </div>
-
-                            <div className='awards-content'>
-                              <span>
-                                BY TENGKU LAKSAMANA KELANTAN
-                                <br/>
-                                (PATRON HIS HIGHNESS TENGKU ADBUL HALIM IBNI
-                                ALMARHUM SULTAN IBRAHIM)
-                              </span>
-                            </div>
-                            <button
-                              type='button'
-                              className='btn-video green py-3'
-                              data-toggle='modal'
-                              data-target='.bd-example-modal-lg-01'
-                            >
-                              View Video
-                              <i className='fa fa-play-circle'></i>
-                            </button>
-                            <div className='awards-img pt-2'>
-                              <img
-                                src='assets/images/award/reward_p01_award.jpg'
-                                alt='Reward_1'
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-7 col-sm-12 pb-0'>
-                        <div className='bounceInRight'>
-                          <img
-                            src='assets/images/award/reward_p01.jpg'
-                            alt='Reward 01'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='carousel-item'>
-                    <div className='row'>
-                      <div className='col-md-5 col-sm-12 pb-2'>
-                        <div className='bounceInLeft'>
-                          <div className='awards-section-content text-center black'>
-                            <h5 className='font-weight-bold py-4'>
-                              ASIA TOP BUSINESS AWARD 2018
-                            </h5>
-
-                            <div className='awards-img pt-3'>
-                              <img
-                                src='assets/images/award/reward_p02_award.jpg'
-                                alt='Reward_2'
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-7 col-sm-12 '>
-                        <div className='bounceInRight'>
-                          <img
-                            src='assets/images/award/reward_p02.jpg'
-                            alt='Reward 02'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='carousel-item'>
-                    <div className='row'>
-                      <div className='col-md-5 col-sm-12 pb-2'>
-                        <div className='bounceInLeft'>
-                          <div className='awards-section-content text-center black'>
-                            <div className='py-4 awards-header'>
-                              <h5 className='font-weight-bold'>
-                                ASIA PACIFIC TOP EXCELLENCE BRAND
-                                <br/>
-                                (EMERGING ENTERPRISE 2018/ 2019)
-                              </h5>
-                            </div>
-                            <button
-                              type='button'
-                              className='btn-video green py-3'
-                              data-toggle='modal'
-                              data-target='.bd-example-modal-lg-03'
-                            >
-                              View Video
-                              <i className='fa fa-play-circle'></i>
-                            </button>
-                            <div className='awards-img pt-3'>
-                              <img
-                                src='assets/images/award/reward_p03_award.jpg'
-                                alt='Reward_3'
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-7 col-sm-12 '>
-                        <div className='bounceInRight'>
-                          <img
-                            src='assets/images/award/reward_p03.jpg'
-                            alt='Reward 03'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='carousel-item'>
-                    <div className='row'>
-                      <div className='col-md-5 col-sm-12 pb-2'>
-                        <div className='bounceInLeft'>
-                          <div className='awards-section-content text-center black'>
-                            <div className='py-4 awards-header'>
-                              <h5 className='font-weight-bold'>
-                                The BrandLaurete SMEs BestBrands Awards
-                                2018/2019
-                              </h5>
-                            </div>
-                            <p>
-                              Congratulations to VSchool Trend Learning Program
-                              for winning The BrandLaurete SMEs BestBrands Award
-                              2018/2019, for Bestbrands in Education - Online
-                              Learning Platform
-                            </p>
-                            <button
-                              type='button'
-                              className='btn-video green py-3'
-                              data-toggle='modal'
-                              data-target='.bd-example-modal-lg-04'
-                            >
-                              View Video
-                              <i className='fa fa-play-circle'></i>
-                            </button>
-                            <div className='awards-img pt-3'>
-                              <img
-                                src='assets/images/award/reward_p04_award.jpg'
-                                alt='Reward'
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-7 col-sm-12 '>
-                        <div className='bounceInRight'>
-                          <img
-                            src='assets/images/award/reward_p04.jpg'
-                            alt='Reward'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='carousel-item'>
-                    <div className='row'>
-                      <div className='col-md-5 col-sm-12 pb-2'>
-                        <div className='bounceInLeft'>
-                          <div className='awards-section-content text-center black'>
-                            <div className='py-4 awards-header'>
-                              <h5 className='font-weight-bold'>
-                                GOLDEN BULL AWARD 2019
-                              </h5>
-                            </div>
-                            <p>
-                              Congratulations to VKids Trend Sdn Bhd for Winning
-                              The Outstanding SME Golden Bull Award 2019 as one
-                              of Malaysia’s Finest Companies
-                            </p>
-                            <button
-                              type='button'
-                              className='btn-video green py-3'
-                              data-toggle='modal'
-                              data-target='.bd-example-modal-lg-05'
-                            >
-                              View Video
-                              <i className='fa fa-play-circle'></i>
-                            </button>
-                            <div className='awards-img pt-3'>
-                              <img
-                                src='assets/images/award/reward_p05_award.jpg'
-                                alt='Reward'
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className='col-md-7 col-sm-12 '>
-                        <div className='bounceInRight'>
-                          <img
-                            src='assets/images/award/reward_p05.jpg'
-                            alt='Reward'
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+      {award && award.length && (
+        <section className='awards-section full-height'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div className='awards-section-header text-center text-uppercase'>
+                  <h1>Awards & Recognition</h1>
+                  <hr style={{margin: 'auto'}}/>
                 </div>
-                <a
-                  className='awards-prev carousel-control-prev black'
-                  href='#carouselExampleIndicators2'
-                  role='button'
-                  data-slide='prev'
+              </div>
+            </div>
+            <div className='row'>
+              <div className='col-lg-12'>
+                <div
+                  id='carouselExampleIndicators2'
+                  className='carousel slide service'
+                  data-ride='carousel'
                 >
-                  <span
-                    className='carousel-control-prev-icon'
-                    aria-hidden='true'
-                  ></span>
-                  <span className='sr-only'>Previous</span>
-                </a>
-                <a
-                  className='awards-prev carousel-control-next black'
-                  href='#carouselExampleIndicators2'
-                  role='button'
-                  data-slide='next'
-                >
-                  <span
-                    className='carousel-control-next-icon'
-                    aria-hidden='true'
-                  ></span>
-                  <span className='sr-only'>Next</span>
-                </a>
+                  <div className='carousel-inner'>
+                    {award.map((item, index) => (
+                      <div className={'carousel-item ' + (index === 0 ? 'active' : '')}>
+                        <div className='row'>
+                          <div className='col-md-5 col-sm-12 pb-2'>
+                            <div className='bounceInLeft'>
+                              <div className='awards-section-content text-center black'>
+                                <div className='py- awards-header'>
+                                  <h5 className='font-weight-bold'>{item.Title}{index}</h5>
+                                </div>
+                                <div className='awards-content'>
+                                  <span>{item.Description}</span>
+                                </div>
+                                {item.Video && (
+                                  <button type='button' className='btn-video green py-3' data-toggle='modal' data-target={'.bd-example-modal-lg-' + index}>View Video
+                                    <i className='fa fa-play-circle'></i>
+                                  </button>
+                                )}
+                                <div className='awards-img pt-2'>
+                                  <img src={item.Logo}/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className='col-md-7 col-sm-12 pb-0'>
+                            <div className='bounceInRight'>
+                              <img src={item.Photo}/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <a
+                    className='awards-prev carousel-control-prev black'
+                    href='#carouselExampleIndicators2'
+                    role='button'
+                    data-slide='prev'
+                  >
+                    <span className='carousel-control-prev-icon' aria-hidden='true'></span>
+                    <span className='sr-only'>Previous</span>
+                  </a>
+                  <a
+                    className='awards-prev carousel-control-next black'
+                    href='#carouselExampleIndicators2'
+                    role='button'
+                    data-slide='next'
+                  >
+                    <span className='carousel-control-next-icon' aria-hidden='true'></span>
+                    <span className='sr-only'>Next</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Popup video */}
-      <div
-        className='modal fade bd-example-modal-lg-01'
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='myLargeModalLabel'
-        aria-hidden='true'
-      >
-        <div className='modal-dialog modal-lg'>
-          <div className='modal-content'>
-            <video
-              poster='assets/images/video/reward_p01-videothumb.jpg'
-              id='player01'
-              controls
-            >
-              <source
-                src='assets/images/video/reward_p01-D UBR InternationL Award.mp4'
-                type='video/mp4'
-              />
-            </video>
+      {award && award.length && award.map((item, index) => (item.Video && (
+        <div
+          className={'modal fade bd-example-modal-lg-' + index}
+          tabIndex='-1'
+          role='dialog'
+          aria-labelledby='myLargeModalLabel'
+          aria-hidden='true'
+        >
+          <div className='modal-dialog modal-lg'>
+            <div className='modal-content'>
+              <video
+                poster='assets/images/video/reward_p01-videothumb.jpg'
+                id={'player' + index}
+                controls
+              >
+                <source
+                  src={resourceURL + item.Video}
+                  type='video/mp4'
+                />
+              </video>
+            </div>
           </div>
         </div>
-      </div>
+      )))}
 
-      <div
-        className='modal fade bd-example-modal-lg-03'
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='myLargeModalLabel'
-        aria-hidden='true'
-      >
-        <div className='modal-dialog modal-lg'>
-          <div className='modal-content'>
-            <video
-              poster='assets/images/video/reward_p03_videothumb.jpg'
-              id='player03'
-              playsInline
-              controls
-            >
-              <source
-                src='assets/images/video/reward_p03-D Top Asia Pacific Excellence Brand Award.mp4'
-                type='video/mp4'
-              />
-            </video>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className='modal fade bd-example-modal-lg-04'
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='myLargeModalLabel'
-        aria-hidden='true'
-      >
-        <div className='modal-dialog modal-lg'>
-          <div className='modal-content'>
-            <video
-              poster='assets/images/video/reward_p04_videothumb.jpg'
-              id='player04'
-              playsInline
-              controls
-            >
-              <source
-                src='assets/images/video/reward_p04-D SMEs BestBrands Award.mp4'
-                type='video/mp4'
-              />
-            </video>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className='modal fade bd-example-modal-lg-05'
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='myLargeModalLabel'
-        aria-hidden='true'
-      >
-        <div className='modal-dialog modal-lg'>
-          <div className='modal-content'>
-            <video
-              poster='assets/images/video/reward_p05_videothumb.jpg'
-              id='player05'
-              playsInline
-              controls
-            >
-              <source
-                src='assets/images/video/reward_p05-D VKids Trend Sdn Bhd Golden Bull Awards 2019 Full HD.mp4'
-                type='video/mp4'
-              />
-            </video>
-          </div>
-        </div>
-      </div>
-
-      {/* Reward Modal */}
+      {/* Slider of Intro Video */}
       {introVideos && introVideos.length && introVideos.map((item, index) => (
         <div
           key={index}
-          className={'modal fade reward-modal-lg-0' + index}
+          className={'modal fade reward-modal-lg-' + index}
           tabIndex='-1'
           role='dialog'
           aria-labelledby='myLargeModalLabel'
@@ -648,7 +399,7 @@ function Home() {
             <div className='modal-content'>
               <video
                 poster={resourceURL + item.Cover}
-                id='player06'
+                id={'slider-player' + index}
                 playsInline
                 controls
               >
@@ -708,7 +459,7 @@ function Home() {
                 <a
                   href='https://www.vschooltrend.com/'
                   data-toggle='modal'
-                  data-target={'.reward-modal-lg-0' + index}
+                  data-target={'.reward-modal-lg-' + index}
                 >
                   <div
                     className='product-card'
