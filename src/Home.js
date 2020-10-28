@@ -320,14 +320,14 @@ function Home() {
                                   </button>
                                 )}
                                 <div className='awards-img pt-2'>
-                                  <img src={item.Logo}/>
+                                  <img src={resourceURL + item.Logo}/>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div className='col-md-7 col-sm-12 pb-0'>
                             <div className='bounceInRight'>
-                              <img src={item.Photo}/>
+                              <img src={resourceURL + item.Photo}/>
                             </div>
                           </div>
                         </div>
