@@ -21,7 +21,7 @@ function Home() {
 
   useEffect(() => {
     if (mainVideo === null) {
-      fetch('/api/intro-video?page=home')
+      fetch('/api/slider?page=home&key=intro-video')
         .then((response) => response.json())
         .then((response) => setMainVideo(response.data[0]));
     }
@@ -29,7 +29,7 @@ function Home() {
 
   useEffect(() => {
     if (introVideos === null) {
-      fetch('/api/slider?page=home&key=intro-video')
+      fetch('/api/slider?page=home&key=company-video')
         .then((response) => response.json())
         .then((response) => setIntroVideos(response.data));
     }
