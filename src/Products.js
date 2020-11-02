@@ -8,30 +8,30 @@ export default function Products() {
 
   useEffect(() => {
     if (mainVideo === null) {
-      fetch('/api/intro-video?page=product')
+      fetch('/api/slider?page=product&key=intro-video')
         .then((response) => response.json())
         .then((res) => {
-          if (res.status === 200) {
+          // if (res.status === 200) {
             const { data } = res.data;
             if (data && data.length) {
               setMainVideo(data[0]);
             }
-          }
+          // }
         });
     }
   }, [mainVideo]);
 
   useEffect(() => {
     if (slider === null) {
-      fetch('/api/slider?page=product')
+      fetch('/api/slider?page=product&key=image-slider')
         .then((response) => response.json())
         .then((res) => {
-          if (res.status === 200) {
+          // if (res.status === 200) {
             const { data } = res.data;
             if (data && data.length) {
               setSlider(data);
             }
-          }
+          // }
         });
     }
   }, [slider]);
