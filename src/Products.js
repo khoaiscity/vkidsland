@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 export default function Products() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
@@ -10,14 +10,7 @@ export default function Products() {
     if (mainVideo === null) {
       fetch('/api/slider?page=product&key=intro-video')
         .then((response) => response.json())
-        .then((res) => {
-          // if (res.status === 200) {
-            const { data } = res.data;
-            if (data && data.length) {
-              setMainVideo(data[0]);
-            }
-          // }
-        });
+        .then((response) => setMainVideo(response.data[0]));
     }
   }, [mainVideo]);
 
@@ -25,14 +18,7 @@ export default function Products() {
     if (slider === null) {
       fetch('/api/slider?page=product&key=image-slider')
         .then((response) => response.json())
-        .then((res) => {
-          // if (res.status === 200) {
-            const { data } = res.data;
-            if (data && data.length) {
-              setSlider(data);
-            }
-          // }
-        });
+        .then((response) => setSlider(response.data));
     }
   }, [slider]);
 
@@ -72,7 +58,7 @@ export default function Products() {
             <div className='row'>
               <div className='col-12 col-md-6'>
                 <div className='banner-title text-center text-uppercase'>
-                  <img src='assets/icons/vschool.png' alt='VSCHOOL TREND' />
+                  <img src='assets/icons/vschool.png' alt='VSCHOOL TREND'/>
                   <div className='hw pb-5'></div>
                   <h3>STUDY ANYTIME. ANYWHERE</h3>
                   <p className='banner-caption1 pt-2'>
@@ -85,7 +71,8 @@ export default function Products() {
           </div>
         </div>
       </section>
-      {slider && (
+
+      {slider && slider.length && (
         <section className='main-landing-section'>
           <div
             id='carouselExampleIndicators'
@@ -93,7 +80,7 @@ export default function Products() {
             data-ride='carousel'
           >
             <ol className='carousel-indicators'>
-              {slider.map((_, index) => (
+              {slider.map((item, index) => (
                 <li
                   data-target='#carouselExampleIndicators'
                   data-slide-to={index}
@@ -121,9 +108,7 @@ export default function Products() {
                 href='https://www.facebook.com/vschooltrend'
                 rel='noopener noreferrer'
                 target='_blank'
-              >
-                Find out more
-              </a>
+              >Find out more</a>
             </div>
             <a
               className='banner-prev carousel-control-prev'
