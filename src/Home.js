@@ -102,7 +102,7 @@ function Home() {
                           'url(' +
                           resourceURL +
                           item.Path +
-                          ') no-repeat center center fixed',
+                          ') no-repeat center center',
                       }}
                     ></div>
                   </div>
