@@ -21,7 +21,7 @@ function Home() {
 
   useEffect(() => {
     if (mainVideo === null) {
-      fetch('/api/intro-video?page=home')
+      fetch('/api/slider?page=home&key=intro-video')
         .then((response) => response.json())
         .then((response) => setMainVideo(response.data[0]));
     }
@@ -29,7 +29,7 @@ function Home() {
 
   useEffect(() => {
     if (introVideos === null) {
-      fetch('/api/slider?page=home&key=intro-video')
+      fetch('/api/slider?page=home&key=company-video')
         .then((response) => response.json())
         .then((response) => setIntroVideos(response.data));
     }
@@ -312,7 +312,6 @@ function Home() {
                                 <div className='py- awards-header'>
                                   <h5 className='font-weight-bold'>
                                     {item.Title}
-                                    {index}
                                   </h5>
                                 </div>
                                 <div className='awards-content'>
@@ -332,14 +331,14 @@ function Home() {
                                   </button>
                                 )}
                                 <div className='awards-img pt-2'>
-                                  <img src={item.Logo} />
+                                  <img src={resourceURL + item.Logo} alt='' />
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div className='col-md-7 col-sm-12 pb-0'>
                             <div className='bounceInRight'>
-                              <img src={item.Photo} />
+                              <img src={resourceURL + item.Photo} alt='' />
                             </div>
                           </div>
                         </div>
