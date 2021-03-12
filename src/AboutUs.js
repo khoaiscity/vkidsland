@@ -88,69 +88,74 @@ export default function AboutUs() {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='code-value-header text-center text-uppercase'>
-                <h1>Core Values</h1>
+                {/*<h1>Core Values</h1>*/}
                 <hr style={{ margin: 'auto' }} />
               </div>
             </div>
           </div>
 
           <div className='row'>
-            <div className='col-md-3 col-6'>
-              <div className='code-container-1'>
-                <div className='code-content d-flex justify-content-center'>
-                  <div className='code-details text-center'>
-                    <img src='/assets/icons/code-1.png' alt='Code Value 1' />
-                    <p className='black pt-3'>
-                      Always Exceed <br />
-                      Expectations
-                    </p>
-                  </div>
-                </div>
+            <div className='col-lg-12'>
+              <div className='core-values text-center'>
+                <img src='/assets/images/core_values.png' alt='Core Values' />
               </div>
             </div>
-            <div className='col-md-3 col-6'>
-              <div className='code-container-2'>
-                <div className='code-content d-flex justify-content-center'>
-                  <div className='code-details text-center'>
-                    <img src='/assets/icons/code-2.png' alt='Code Value 2' />
-                    <p className='black pt-3'>
-                      Continuous <br />
-                      Improvement
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-md-3 col-6'>
-              <div className='code-container-3'>
-                <div className='code-content d-flex justify-content-center'>
-                  <div className='code-details text-center'>
-                    <img src='/assets/icons/code-3.png' alt='Code Value 3' />
-                    <p className='black pt-3'>
-                      We Listen, <br />
-                      We Care, <br />
-                      We Serve
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='col-md-3 col-6'>
-              <div className='code-container-4'>
-                <div className='code-content d-flex justify-content-center'>
-                  <div className='code-details text-center'>
-                    <img src='/assets/icons/code-4.png' alt='Code Value 4' />
-                    <p className='black pt-3'>
-                      We Believe in
-                      <br />
-                      People and
-                      <br />
-                      Their Dreams
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/*<div className='col-md-3 col-6'>*/}
+            {/*  <div className='code-container-1'>*/}
+            {/*    <div className='code-content d-flex justify-content-center'>*/}
+            {/*      <div className='code-details text-center'>*/}
+            {/*        <img src='/assets/icons/code-1.png' alt='Code Value 1' />*/}
+            {/*        <p className='black pt-3'>*/}
+            {/*          Always Exceed <br />*/}
+            {/*          Expectations*/}
+            {/*        </p>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            {/*<div className='col-md-3 col-6'>*/}
+            {/*  <div className='code-container-2'>*/}
+            {/*    <div className='code-content d-flex justify-content-center'>*/}
+            {/*      <div className='code-details text-center'>*/}
+            {/*        <img src='/assets/icons/code-2.png' alt='Code Value 2' />*/}
+            {/*        <p className='black pt-3'>*/}
+            {/*          Continuous <br />*/}
+            {/*          Improvement*/}
+            {/*        </p>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            {/*<div className='col-md-3 col-6'>*/}
+            {/*  <div className='code-container-3'>*/}
+            {/*    <div className='code-content d-flex justify-content-center'>*/}
+            {/*      <div className='code-details text-center'>*/}
+            {/*        <img src='/assets/icons/code-3.png' alt='Code Value 3' />*/}
+            {/*        <p className='black pt-3'>*/}
+            {/*          We Listen, <br />*/}
+            {/*          We Care, <br />*/}
+            {/*          We Serve*/}
+            {/*        </p>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
+            {/*<div className='col-md-3 col-6'>*/}
+            {/*  <div className='code-container-4'>*/}
+            {/*    <div className='code-content d-flex justify-content-center'>*/}
+            {/*      <div className='code-details text-center'>*/}
+            {/*        <img src='/assets/icons/code-4.png' alt='Code Value 4' />*/}
+            {/*        <p className='black pt-3'>*/}
+            {/*          We Believe in*/}
+            {/*          <br />*/}
+            {/*          People and*/}
+            {/*          <br />*/}
+            {/*          Their Dreams*/}
+            {/*        </p>*/}
+            {/*      </div>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       </section>

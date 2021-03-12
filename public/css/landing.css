@@ -404,6 +404,11 @@ video {
     top: 15%;
 }
 
+.core-values img {
+    width: 450px;
+    height: 100%;
+}
+
 @media (max-width: 992px) {
     .team-section {
         height: fit-content;
