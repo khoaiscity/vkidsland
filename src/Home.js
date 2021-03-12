@@ -455,7 +455,7 @@ function Home() {
                         alt='REMY & DERLIN'
                       />
                     </div>
-                    {/*<p className='white'>{item.Title}</p>*/}
+                    <p className='white'>&nbsp;</p>
                   </div>
                 ))}
               </div>
