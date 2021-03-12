@@ -150,7 +150,11 @@ button.slick-prev:hover {
     float: right;
 }
 
-.slick-slide img {
+.slickAmbassador .slick-slide img {
+    display: block;
+}
+
+.slickIntroVideo .slick-slide img {
     display: block;
     height: 270px;
     width: 100%;

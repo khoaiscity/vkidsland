@@ -417,7 +417,7 @@ function Home() {
             aria-labelledby='myLargeModalLabel'
             aria-hidden='true'
           >
-            <div className='modal-dialog modal-lg'>
+            <div className='modal-dialog modal-lg slickIntroVideo'>
               <div className='modal-content'>
                 <video
                   poster={resourceURL + item.Cover}
