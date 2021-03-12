@@ -97,7 +97,7 @@ export default function AboutUs() {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='core-values text-center'>
-                <img src='/assets/images/core_values.png' alt='Core Values' />
+                          <img src='/assets/images/core_values.svg' alt='Core Values' />
               </div>
             </div>
             {/*<div className='col-md-3 col-6'>*/}
