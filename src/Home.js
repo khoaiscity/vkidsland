@@ -149,10 +149,7 @@ function Home() {
               <div className='text-uppercase text-left black pb-3'>
                 <h2 className='font-weight-900 pt-4'>About Company</h2>
                 <hr />
-                <p className='line-hg-2 pt-2'>
-                  Maximize the Power of Internet Technology together with
-                  Education.
-                </p>
+                <p className='line-hg-2 pt-2'>Maximize the Power of Internet Technology with Education.</p>
               </div>
               <a
                 className='default-btn text-uppercase white'
