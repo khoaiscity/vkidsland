@@ -78,37 +78,26 @@ function Header() {
                     </NavLink>
                   </li>
                   <li className='nav-item'>
-                    <NavLink className='nav-link ml-1' to='/contact'>
-                      Contact
-                    </NavLink>
+                    <NavLink className='nav-link ml-1' to='/contact'>Contact</NavLink>
                   </li>
-                  <li className='nav-item dropdown'>
-                    <a
-                      className='nav-link ml-1 dropdown-toggle language'
-                      href='#top'
-                      id='language'
-                      role='button'
-                      data-toggle='dropdown'
-                      aria-haspopup='true'
-                      aria-expanded='false'
-                    >
-                      <span className='icon-language'></span>
-                    </a>
-                    <div
-                      className='dropdown-menu'
-                      aria-labelledby='navbarDropdown'
-                    >
-                      <a href='#link' className='dropdown-item'>
-                        ENGLISH
-                      </a>
-                      <a href='#link' className='dropdown-item'>
-                        中文
-                      </a>
-                      <a href='#link' className='dropdown-item'>
-                        Bahasa
-                      </a>
-                    </div>
-                  </li>
+                  {/*<li className='nav-item dropdown'>*/}
+                  {/*  <a*/}
+                  {/*    className='nav-link ml-1 dropdown-toggle language'*/}
+                  {/*    href='#top'*/}
+                  {/*    id='language'*/}
+                  {/*    role='button'*/}
+                  {/*    data-toggle='dropdown'*/}
+                  {/*    aria-haspopup='true'*/}
+                  {/*    aria-expanded='false'*/}
+                  {/*  >*/}
+                  {/*    <span className='icon-language'></span>*/}
+                  {/*  </a>*/}
+                  {/*  <div className='dropdown-menu' aria-labelledby='navbarDropdown'>*/}
+                  {/*    <a href='#link' className='dropdown-item'>ENGLISH</a>*/}
+                  {/*    <a href='#link' className='dropdown-item'>中文</a>*/}
+                  {/*    <a href='#link' className='dropdown-item'>Bahasa</a>*/}
+                  {/*  </div>*/}
+                  {/*</li>*/}
                   <li className='nav-item'>
                     <a
                       className='nav-link ml-1'
