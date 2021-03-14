@@ -11,10 +11,7 @@ export default function AboutUs() {
                 <div className='banner-title text-center text-uppercase'>
                   <h2>The Future Begins Here</h2>
                   <div className='hw'></div>
-                  <p className='pt-5'>
-                    Maximize the Power of Internet Technology together with
-                    Education.
-                  </p>
+                  <p className='pt-5'>Maximize the Power of Internet Technology with Education.</p>
                 </div>
               </div>
             </div>
