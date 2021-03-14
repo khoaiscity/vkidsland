@@ -27,7 +27,7 @@ export default function Partner2() {
             <div className='col-12 col-lg-4 pt-3'>
               <div className='partner-details text-uppercase text-left black'>
                 <h2 className='text-title font-weight-900'>
-                  DR. DENISE LIM MESSAGE
+                  DR. DENISE LIM
                 </h2>
                 <hr />
                 <p className='text-content pt-4'>MD & CO-FOUNDER</p>

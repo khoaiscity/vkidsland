@@ -26,7 +26,7 @@ export default function Partner1() {
             <div className='col-12 col-lg-4 pt-3'>
               <div className='partner-details text-uppercase text-left black'>
                 <h2 className='text-title font-weight-900'>
-                  DR. VIVIAN KER MESSAGE
+                  DR. VIVIAN KER
                 </h2>
                 <hr />
                 <p className='text-content pt-4'>CEO & FOUNDER</p>
