@@ -440,7 +440,7 @@ function Home() {
               <div className='row'>
                 <div className='col-lg-12 py-5'>
                   <div className='ambassador-section-header text-center text-uppercase'>
-                    <h1 className='pb-2'>Hall of fame</h1>
+                    <h1 className='pb-2'>Leaders</h1>
                     <div className='hw'></div>
                   </div>
                 </div>
@@ -459,15 +459,13 @@ function Home() {
                   </div>
                 ))}
               </div>
-              <div className='ribbon-container text-center'>
-                <div className='pt-5'>
-                  <p className='pb-1'>Let’s join VKids Trend big family.</p>
-                  <br />
-                  <NavLink className='style-link-btn' to='/contact'>
-                    Join us
-                  </NavLink>
-                </div>
-              </div>
+              {/*<div className='ribbon-container text-center'>*/}
+              {/*  <div className='pt-5'>*/}
+              {/*    <p className='pb-1'>Let’s join VKids Trend big family.</p>*/}
+              {/*    <br />*/}
+              {/*    <NavLink className='style-link-btn' to='/contact'>Join us</NavLink>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
             </div>
           </div>
         </section>
