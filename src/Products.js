@@ -144,10 +144,7 @@ export default function Products() {
             <div className='col-lg-12'>
               <div className='explore-header text-center text-uppercase'>
                 <h1>VSchool Trend Learning Program</h1>
-                <p className='pt-3 pb-5'>
-                  The Most Popular E-Learning Program In Malaysia
-                </p>
-
+                <p className='pt-3 pb-5'>A Brand New and Most Comprehensive Online Learning Programme</p>
                 <a
                   href='https://www.vschooltrend.com'
                   className='style1-btn px-5 py-3'
