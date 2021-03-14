@@ -28,7 +28,7 @@ function Footer() {
               </a>
             </div>
             <div className='reserved pt-2 px-2'>
-              AJL932213 | © 2020 VKIDS TREND. All Rights Reserved
+              AJL932213 | © 2021 VKIDS TREND. All Rights Reserved
             </div>
           </div>
 
