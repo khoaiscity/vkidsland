@@ -42,7 +42,7 @@ export default function AboutUs() {
             <div className='col-12 col-md-6'>
               <fieldset className='field-container'>
                 <legend style={{ margin: 'auto' }}>
-                  <h3 className='abt-section text-uppercase'> Vision </h3>
+                  <h3 className='abt-section text-uppercase' style={{ color:'black'}}> Vision </h3>
                 </legend>
                 <div className='row'>
                   <div className='col-md-12'>
@@ -59,7 +59,7 @@ export default function AboutUs() {
             <div className='col-12 col-md-6'>
               <fieldset className='field-container'>
                 <legend style={{ margin: 'auto' }}>
-                  <h3 className='abt-section text-uppercase'> Mission </h3>
+                  <h3 className='abt-section text-uppercase' style={{ color:'black'}}> Mission </h3>
                 </legend>
                 <div className='row'>
                   <div className='col-md-12'>
