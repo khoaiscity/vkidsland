@@ -209,10 +209,7 @@ function Home() {
                 <h2 className='font-weight-900 pt-4'>Management Team</h2>
                 <hr />
                 <p className='line-hg-2 font-09'>
-                  An internet based education business company leading by the
-                  outstanding management team which provides a platform for
-                  Malaysian students ranging from standard 1 to secondary form
-                  5.
+                  An internet based education business company lead by 3 founders which provides a platform for Malaysian students ranging from Pre-school - Secondary Form 5, believes e-learning is a New Age Learning for all Malaysian students today!
                 </p>
               </div>
             </div>
@@ -235,9 +232,7 @@ function Home() {
                           <p className='team-content-text'>{item.Position}</p>
                           <div className='hw'></div>
                           <p className='team-content-info py-3'>{item.Intro}</p>
-                          <NavLink className='style1-btn' to='/partner1'>
-                            Read More
-                          </NavLink>
+                          <NavLink className='style1-btn' to={'/partner'+(index+1)}>Read More</NavLink>
                         </div>
                       </div>
                     </div>
