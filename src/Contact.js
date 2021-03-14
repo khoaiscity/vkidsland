@@ -12,11 +12,7 @@ export default function Contact() {
                 <div className='banner-title ptb-50 text-center text-uppercase'>
                   <h1>Contact us</h1>
                   <div className='hw'></div>
-                  <p className='pt-5'>
-                    ALL FOR ONE, AND ONR FOR ALL. SUCCESS BECOMES YOU.
-                    <br />
-                    LET US HELP YOU BECOME A SUCCESS.
-                  </p>
+                  <p className='pt-5'>TOGETHER WE ACHIEVE EXTRAORDINARY</p>
                 </div>
               </div>
             </div>
