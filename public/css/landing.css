@@ -9,8 +9,12 @@ video {
     letter-spacing: 2px;
 }
 
+.text-title.partner-name {
+    font-size: 1.7rem;
+}
+
 .text-content {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .text-content-2 {
