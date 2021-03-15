@@ -228,7 +228,7 @@ function Home() {
                           </h4>
                           <p className='team-content-text'>{item.Position}</p>
                           <div className='hw'></div>
-                          <p className='team-content-info py-3'>{item.Intro}</p>
+                          <p className='team-content-info py-3'>{item.Intro}<br/>{item.Intro2}</p>
                           <NavLink className='style1-btn' to={'/partner'+(index+1)}>Read More</NavLink>
                         </div>
                       </div>

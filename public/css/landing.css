@@ -14,7 +14,7 @@ video {
 }
 
 .text-content {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .text-content-2 {
@@ -277,7 +277,7 @@ video {
 .amd-portrait img {
     /* width: fit-content;
     height: fit-content; */
-    width: 250px;
+    width: 290px;
     height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
 }

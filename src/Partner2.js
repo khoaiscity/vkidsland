@@ -1,7 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function Partner2() {
+function Partner2() {
+  const resourceURL = process.env.REACT_APP_RESOURCE_URL;
+
+  const [member1, setTeamMember1] = useState(null);
+  const [member2, setTeamMember2] = useState(null);
+  const [member3, setTeamMember3] = useState(null);
+
+  useEffect(() => {
+    if (member1 === null) {
+      fetch('/api/team-manager/1')
+          .then((response) => response.json())
+          .then((response) => setTeamMember1(response.data));
+    }
+  }, [member1]);
+
+  useEffect(() => {
+    if (member2 === null) {
+      fetch('/api/team-manager/2')
+          .then((response) => response.json())
+          .then((response) => setTeamMember2(response.data));
+    }
+  }, [member2]);
+
+  useEffect(() => {
+    if (member3 === null) {
+      fetch('/api/team-manager/3')
+          .then((response) => response.json())
+          .then((response) => setTeamMember3(response.data));
+    }
+  }, [member3]);
+
   return (
     <>
       <section className='banner-section bg-partner2'>
@@ -11,9 +41,9 @@ export default function Partner2() {
               <div className='col-12 col-md-6'></div>
               <div className='col-12 col-md-6'>
                 <div className='banner-title text-center text-uppercase'>
-                  <h2>DR. DENISE LIM</h2>
+                  <h2>{member2 && (member2.Name)}</h2>
                   <div className='hw'></div>
-                  <p className='pt-5'>MD & CO-FOUNDER</p>
+                  <p className='pt-5'>{member2 && (member2.Position)}</p>
                 </div>
               </div>
             </div>
@@ -26,17 +56,15 @@ export default function Partner2() {
           <div className='row'>
             <div className='col-12 col-lg-4 pt-3'>
               <div className='partner-details text-uppercase text-left black'>
-                <h2 className='text-title partner-name font-weight-900'>DR. DENISE LIM</h2>
+                <h2 className='text-title partner-name font-weight-900'>{member2 && (member2.Name)}</h2>
                 <hr />
-                <p className='text-content pt-4'>MD & CO-FOUNDER</p>
+                <p className='text-content pt-4'>{member2 && (member2.Position)}</p>
               </div>
             </div>
             <div className='col-12 col-lg-8 pt-5'>
               <div className='text-uppercase black'>
-                <p className='font-2'>
-                  Your Thoughts & Actions Determine Your Future.
-                </p>
-                <p className='font-2'>你的思想与行动决定你的未来</p>
+                <p className='font-2'>{member2 && (member2.Intro)}</p>
+                <p className='font-2'>{member2 && (member2.Intro2)}</p>
               </div>
             </div>
           </div>
@@ -109,15 +137,16 @@ export default function Partner2() {
             <div id='partner1' className='col-md-6 col-12 py-2'>
               <div className='row'>
                 <div className='col-6'>
-                  <img
-                    src='assets/images/member1-vivian.jpg'
-                    alt='DR. VIVIAN KER'
-                  />
+                  {member1 && (<img
+                      src={resourceURL + member1.HalfBodyPhoto}
+                      alt={member1.Name}
+                  />)}
+                  {/*<img src='assets/images/member1-vivian.jpg' alt='DR. VIVIAN KER'/>*/}
                 </div>
                 <div className='col-6'>
                   <div className='partner-info black'>
-                    <h3 className='font-weight-800'>DR. VIVIAN KER</h3>
-                    <p>CEO & FOUNDER</p>
+                    <h3 className='font-weight-800'>{member1 && (member1.Name)}</h3>
+                    <p>{member1 && (member1.Position)}</p>
                     <NavLink to='partner1'>
                       <button className='default-btn white'>Read More</button>
                     </NavLink>
@@ -128,12 +157,16 @@ export default function Partner2() {
             <div id='partner2' className='col-md-6 col-12 px-2'>
               <div className='row'>
                 <div className='col-6'>
-                  <img src='assets/images/member3-eric.jpg' alt='Eric' />
+                  {member3 && (<img
+                      src={resourceURL + member3.HalfBodyPhoto}
+                      alt={member3.Name}
+                  />)}
+                  {/*<img src='assets/images/member3-eric.jpg' alt='Eric' />*/}
                 </div>
                 <div className='col-6'>
                   <div className='partner-info black'>
-                    <h3 className='font-weight-800'>DR. ERIC ANG</h3>
-                    <p>COO & CO-FOUNDER</p>
+                    <h3 className='font-weight-800'>{member3 && (member3.Name)}</h3>
+                    <p>{member3 && (member3.Position)}</p>
                     <NavLink to='partner3'>
                       <button className='default-btn white'>Read More</button>
                     </NavLink>
@@ -147,3 +180,5 @@ export default function Partner2() {
     </>
   );
 }
+
+export default Partner2;
