@@ -101,7 +101,7 @@ function Header() {
                   <li className='nav-item'>
                     <a
                       className='nav-link ml-1'
-                      href='http://vkids.securelayers.cloud'
+                      href='http://vkidslive.securelayers.cloud'
                       rel='noopener noreferrer'
                       target='_blank'
                     >
