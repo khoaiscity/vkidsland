@@ -48,21 +48,10 @@ export default function Contact() {
                       className='white'
                       to='https://wa.me/60106510906'
                       target='_blank'
-                    >
-                      010-6510906
-                    </Link>
+                    >010-6510906</Link>
                   </p>
                 </div>
-                <p>
-                  Email:{' '}
-                  <Link
-                    className='__cf_email__'
-                    data-cfemail='7e1d0b0d0a11131b0c0d1b0c08171d1b3e0815171a0d0a0c1b101a0d1c501d1113'
-                    to='/cdn-cgi/l/email-protection'
-                  >
-                    [email&#160;protected]
-                  </Link>
-                </p>
+                <p>Email: support@vkidstrendsb.com</p>
               </div>
             </div>
           </div>
@@ -159,21 +148,10 @@ export default function Contact() {
                       className='white'
                       target='_blank'
                       to='https://wa.me/60106510906'
-                    >
-                      010-6510906
-                    </Link>
+                    >010-6510906</Link>
                   </p>
                 </div>
-                <p>
-                  Email:{' '}
-                  <Link
-                    to='/cdn-cgi/l/email-protection'
-                    className='__cf_email__'
-                    data-cfemail='2645535552494b4354554354504f454366504d4f4255525443484255440845494b'
-                  >
-                    [email&#160;protected]
-                  </Link>
-                </p>
+                <p>Email: support@vkidstrendsb.com</p>
               </div>
             </div>
           </div>
