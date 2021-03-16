@@ -60,10 +60,9 @@ function Partner3() {
                 <p className='text-content pt-4'>{member3 && (member3.Position)}</p>
               </div>
             </div>
-            <div className='col-12 col-lg-8 pt-5'>
+            <div className='col-12 col-lg-8 pt-2'>
               <div className='text-uppercase black'>
-                <p className='font-2'>{member3 && (member3.Intro)}</p>
-                <p className='font-2'>{member3 && (member3.Intro2)}</p>
+                <p className='font-1'>{member3 && (member3.LongDescription)}</p>
               </div>
             </div>
           </div>
