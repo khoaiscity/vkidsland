@@ -484,9 +484,7 @@ function Home() {
                         <i className='video_play fa fa-play'></i>
                       </div>
                     </div>
-                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>
-                      {item.Title}
-                    </h1>
+                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>{item.Title}</h1>
                   </a>
                 </div>
               ))}
