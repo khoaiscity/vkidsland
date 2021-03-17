@@ -59,7 +59,7 @@ export default function Contact() {
             <div className='map-canvas'>
               <iframe
                 title='video'
-                src='https://maps.google.com/maps?q=25A%2C%20Jalan%20Kenari%202%2C%20Bandar%20Puchong%20Jaya%2C%2047100%20Puchong%2C%20Selangor.&t=&z=13&ie=UTF8&iwloc=&output=embed'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1883229891073!2d101.61879261475708!3d3.0441513977831347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b59fd886941%3A0x4042bcc667b1b99e!2sVKIDS%20TREND%20SDN%20BHD%20(HQ)!5e0!3m2!1sen!2s!4v1615963535776!5m2!1sen!2s'
                 width='600'
                 height='450'
                 frameBorder='0'
@@ -159,7 +159,7 @@ export default function Contact() {
             <div className='map-canvas'>
               <iframe
                 title='video'
-                src='https://maps.google.com/maps?q=72-3-59%2C%20Arena%20Curve%2C%20Jalan%20Mahsuri%2C%20%2011950%20Bayan%20Lepas%2C%20Penang.&t=&z=13&ie=UTF8&iwloc=&output=embed'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.594404546844!2d100.27781971476486!3d5.325781896136614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac131bae56441%3A0xb0efd4b2e2a49f94!2sVKids%20Trend%20Sdn%20Bhd%20(PG)!5e0!3m2!1sen!2s!4v1615963558760!5m2!1sen!2s'
                 width='600'
                 height='450'
                 frameBorder='0'
