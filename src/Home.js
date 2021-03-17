@@ -397,33 +397,6 @@ function Home() {
             )
         )}
 
-      {/* Slider of Intro Video */}
-      {introVideos &&
-        introVideos.length &&
-        introVideos.map((item, index) => (
-          <div
-            key={index}
-            className={'modal fade reward-modal-lg-' + index}
-            tabIndex='-1'
-            role='dialog'
-            aria-labelledby='myLargeModalLabel'
-            aria-hidden='true'
-          >
-            <div className='modal-dialog modal-lg slickIntroVideo'>
-              <div className='modal-content'>
-                <video
-                  poster={resourceURL + item.Cover}
-                  id={'slider-player' + index}
-                  playsInline
-                  controls
-                >
-                  <source src={resourceURL + item.Path} type='video/mp4' />
-                </video>
-              </div>
-            </div>
-          </div>
-        ))}
-
       {/* Hall of fame */}
       {hallOfFame && hallOfFame.length && (
         <section className='ambassador-section bg-green full-height'>
@@ -462,6 +435,33 @@ function Home() {
           </div>
         </section>
       )}
+
+      {/* Slider of Intro Video */}
+      {introVideos &&
+      introVideos.length &&
+      introVideos.map((item, index) => (
+          <div
+              key={index}
+              className={'modal fade reward-modal-lg-' + index}
+              tabIndex='-1'
+              role='dialog'
+              aria-labelledby='myLargeModalLabel'
+              aria-hidden='true'
+          >
+            <div className='modal-dialog modal-lg slickIntroVideo'>
+              <div className='modal-content'>
+                <video
+                    poster={resourceURL + item.Cover}
+                    id={'slider-player' + index}
+                    playsInline
+                    controls
+                >
+                  <source src={resourceURL + item.Path} type='video/mp4' />
+                </video>
+              </div>
+            </div>
+          </div>
+      ))}
 
       <section className='video-award-bg-parallax products-section full-height'>
         <div className='container'>

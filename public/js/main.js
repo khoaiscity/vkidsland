@@ -55,6 +55,11 @@ function videoPopup() {
         player3.pause();
     })
 
+    var player4 = document.getElementById('player4');
+    $('.bd-example-modal-lg-4').on('hide.bs.modal', function (e) {
+        player4.pause();
+    })
+
     // Slider of Intro Video up to 10 videos
     var sliderPlayer0 = document.getElementById('slider-player0');
     $('.reward-modal-lg-0').on('hide.bs.modal', function (e) {

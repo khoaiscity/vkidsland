@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   $('.product-slider').slick({
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
   });
 
   $('.video-award-slider').slick({
-    dots: true,
+    false: true,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
