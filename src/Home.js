@@ -333,8 +333,7 @@ function Home() {
                                       '.bd-example-modal-lg-' + index
                                     }
                                   >View Video <i className='fa fa-play-circle px-1'></i>
-                                  </button>
-                                )}
+                                  </button>)}
                                 {item.isSliderPhoto && (<button
                                   type='button'
                                   className='btn-video green px-2 py-3'
