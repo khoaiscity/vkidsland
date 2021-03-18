@@ -332,9 +332,8 @@ function Home() {
                                     data-target={
                                       '.bd-example-modal-lg-' + index
                                     }
-                                  >
-                                    View Video
-                                    <i className='fa fa-play-circle px-1'></i>
+                                  >View Video <i className='fa fa-play-circle px-1'></i>
+                                  >View Video <i className='fa fa-play-circle px-1'></i>
                                   </button>
                                 )}
                                 <button
@@ -342,9 +341,7 @@ function Home() {
                                   className='btn-video green px-2 py-3'
                                   data-toggle='modal'
                                   data-target={'.bd-example-modal-lg-slider-1'}
-                                >
-                                  View Photo
-                                </button>
+                                >View Photo <i className='fa fa-play-circle px-1'></i></button>
                                 <div className='awards-img pt-2'>
                                   <img src={resourceURL + item.Logo} alt='' />
                                 </div>
