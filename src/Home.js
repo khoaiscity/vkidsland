@@ -149,7 +149,9 @@ function Home() {
               <div className='text-uppercase text-left black pb-3'>
                 <h2 className='font-weight-900 pt-4'>About Company</h2>
                 <hr />
-                <p className='line-hg-2 pt-2'>Maximize the Power of Internet Technology with Education.</p>
+                <p className='line-hg-2 pt-2'>
+                  Maximize the Power of Internet Technology with Education.
+                </p>
               </div>
               <a
                 className='default-btn text-uppercase white'
@@ -206,7 +208,11 @@ function Home() {
                 <h2 className='font-weight-900 pt-4'>Management Team</h2>
                 <hr />
                 <p className='line-hg-2 font-09'>
-                  An internet based education business company lead by 3 founders which provides a platform for Malaysian students ranging from Pre-school - Secondary Form 5, believes e-learning is a New Age Learning for all Malaysian students today!
+                  An internet based education business company lead by 3
+                  founders which provides a platform for Malaysian students
+                  ranging from Pre-school - Secondary Form 5, believes
+                  e-learning is a New Age Learning for all Malaysian students
+                  today!
                 </p>
               </div>
             </div>
@@ -228,8 +234,17 @@ function Home() {
                           </h4>
                           <p className='team-content-text'>{item.Position}</p>
                           <div className='hw'></div>
-                          <p className='team-content-info py-3'>{item.Intro}<br/>{item.Intro2}</p>
-                          <NavLink className='style1-btn' to={'/partner'+(index+1)}>Read More</NavLink>
+                          <p className='team-content-info py-3'>
+                            {item.Intro}
+                            <br />
+                            {item.Intro2}
+                          </p>
+                          <NavLink
+                            className='style1-btn'
+                            to={'/partner' + (index + 1)}
+                          >
+                            Read More
+                          </NavLink>
                         </div>
                       </div>
                     </div>
@@ -320,9 +335,17 @@ function Home() {
                                     }
                                   >
                                     View Video
-                                    <i className='fa fa-play-circle'></i>
+                                    <i className='fa fa-play-circle px-1'></i>
                                   </button>
                                 )}
+                                <button
+                                  type='button'
+                                  className='btn-video green px-2 py-3'
+                                  data-toggle='modal'
+                                  data-target={'.bd-example-modal-lg-slider-1'}
+                                >
+                                  View Photo
+                                </button>
                                 <div className='awards-img pt-2'>
                                   <img src={resourceURL + item.Logo} alt='' />
                                 </div>
@@ -397,6 +420,43 @@ function Home() {
             )
         )}
 
+      {/* Modal Slider sample */}
+      <div
+        className={'modal fade bd-example-modal-lg-slider-1'}
+        tabIndex='-1'
+        role='dialog'
+        aria-labelledby='myLargeModalLabel'
+        aria-hidden='true'
+      >
+        <div className='modal-dialog modal-lg'>
+          <div className='modal-content modal-content-slider bg-green'>
+            <section className='ambassador-section'>
+              <div className='ambassador-container'>
+                <div className='container'>
+                  {/* Slider sample */}
+                  <div className='slickAmbassador'>
+                    {hallOfFame &&
+                      hallOfFame.length &&
+                      hallOfFame.map((item, index) => (
+                        <div className='amd-content text-center'>
+                          <div className='amd-portrait'>
+                            <img
+                              className='m-auto'
+                              src={resourceURL + item.Path}
+                              alt='REMY & DERLIN'
+                            />
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+            {/* Slider sample */}
+          </div>
+        </div>
+      </div>
+
       {/* Hall of fame */}
       {hallOfFame && hallOfFame.length && (
         <section className='ambassador-section bg-green full-height'>
@@ -438,30 +498,30 @@ function Home() {
 
       {/* Slider of Intro Video */}
       {introVideos &&
-      introVideos.length &&
-      introVideos.map((item, index) => (
+        introVideos.length &&
+        introVideos.map((item, index) => (
           <div
-              key={index}
-              className={'modal fade reward-modal-lg-' + index}
-              tabIndex='-1'
-              role='dialog'
-              aria-labelledby='myLargeModalLabel'
-              aria-hidden='true'
+            key={index}
+            className={'modal fade reward-modal-lg-' + index}
+            tabIndex='-1'
+            role='dialog'
+            aria-labelledby='myLargeModalLabel'
+            aria-hidden='true'
           >
             <div className='modal-dialog modal-lg slickIntroVideo'>
               <div className='modal-content'>
                 <video
-                    poster={resourceURL + item.Cover}
-                    id={'slider-player' + index}
-                    playsInline
-                    controls
+                  poster={resourceURL + item.Cover}
+                  id={'slider-player' + index}
+                  playsInline
+                  controls
                 >
                   <source src={resourceURL + item.Path} type='video/mp4' />
                 </video>
               </div>
             </div>
           </div>
-      ))}
+        ))}
 
       <section className='video-award-bg-parallax products-section full-height'>
         <div className='container'>
@@ -484,7 +544,9 @@ function Home() {
                         <i className='video_play fa fa-play'></i>
                       </div>
                     </div>
-                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>{item.Title}</h1>
+                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>
+                      {item.Title}
+                    </h1>
                   </a>
                 </div>
               ))}
@@ -531,12 +593,12 @@ function Home() {
                           href='https://wa.me/60106510906'
                           rel='noopener noreferrer'
                           target='_blank'
-                        >010-6510906</a>
+                        >
+                          010-6510906
+                        </a>
                       </p>
                     </div>
-                    <p className='py-2'>
-                      Email: support@vkidstrendsb.com
-                    </p>
+                    <p className='py-2'>Email: support@vkidstrendsb.com</p>
                   </div>
                   <a href='https://www.facebook.com/vkidstrendsb'>
                     <img
