@@ -25,15 +25,7 @@ export default function AboutUs() {
             <div className='col-12 pb-3 p-5'>
               <div className='black pb-2 text-center'>
                 <p id='about-us-content' className='line-hg-2 font-1'>
-                  An internet based education business company which provides a
-                  platform for malaysian students ranging from primary standard
-                  1 to secondary form 5, we believe e-Learning is a New Age
-                  Learning for all malaysian students today! In correlation with
-                  e-Learning platform, we also serve as a training academy that
-                  provides various personal development goals or plans and
-                  education-related training programs that tailor to the current
-                  market. We believe that education is a fundamental need and
-                  everyone should have access to a better quality education.
+                  An internet based education business company which provides a platform for Malaysian students ranging from<br/>Pre-school - Secondary Form 5,  we believes e-Learning is a New Age Learning for all Malaysian students today!
                 </p>
               </div>
             </div>
@@ -42,7 +34,7 @@ export default function AboutUs() {
             <div className='col-12 col-md-6'>
               <fieldset className='field-container'>
                 <legend style={{ margin: 'auto' }}>
-                  <h3 className='abt-section text-uppercase' style={{ color:'black'}}> Vision </h3>
+                  <h3 className='abt-section text-uppercase' style={{color:'black','text-align':'center'}}>Vision</h3>
                 </legend>
                 <div className='row'>
                   <div className='col-md-12'>
@@ -59,7 +51,7 @@ export default function AboutUs() {
             <div className='col-12 col-md-6'>
               <fieldset className='field-container'>
                 <legend style={{ margin: 'auto' }}>
-                  <h3 className='abt-section text-uppercase' style={{ color:'black'}}> Mission </h3>
+                  <h3 className='abt-section text-uppercase' style={{color:'black','text-align':'center'}}>Mission</h3>
                 </legend>
                 <div className='row'>
                   <div className='col-md-12'>
