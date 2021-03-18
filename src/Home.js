@@ -433,7 +433,7 @@ function Home() {
               <div className='ambassador-container'>
                 <div className='container'>
                   {/* Slider sample */}
-                  <div className='slickAmbassador'>
+                  <div className='slickAward'>
                     {item.sliderPhoto &&
                     item.sliderPhoto.length &&
                     item.sliderPhoto.map((item, index) => (
