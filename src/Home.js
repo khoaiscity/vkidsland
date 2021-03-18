@@ -272,9 +272,8 @@ function Home() {
               {ourProduct.map((item, index) => (
                 <div className='card-container'>
                   <a
-                    href='https://www.vschooltrend.com/'
+                    href='/products'
                     rel='noopener noreferrer'
-                    target='_blank'
                   >
                     <div className='product-card pb-5'>
                       <img src={resourceURL + item.Path} alt='Product' />
