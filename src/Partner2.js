@@ -63,7 +63,7 @@ function Partner2() {
             </div>
             <div className='col-12 col-lg-8 pt-2'>
               <div className='text-uppercase black'>
-                <p className='font-1'>{member2 && (member2.LongDescription)}</p>
+                <p className='font-1' style={{'text-align':'justify'}}>{member2 && (member2.LongDescription)}</p>
               </div>
             </div>
           </div>
