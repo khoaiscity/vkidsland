@@ -333,15 +333,14 @@ function Home() {
                                       '.bd-example-modal-lg-' + index
                                     }
                                   >View Video <i className='fa fa-play-circle px-1'></i>
-                                  >View Video <i className='fa fa-play-circle px-1'></i>
                                   </button>
                                 )}
-                                <button
+                                {item.isSliderPhoto && (<button
                                   type='button'
                                   className='btn-video green px-2 py-3'
                                   data-toggle='modal'
-                                  data-target={'.bd-example-modal-lg-slider-1'}
-                                >View Photo <i className='fa fa-play-circle px-1'></i></button>
+                                  data-target={'.bd-example-modal-lg-slider-'+index}
+                                >View Photo <i className='fa fa-play-circle px-1'></i></button>)}
                                 <div className='awards-img pt-2'>
                                   <img src={resourceURL + item.Logo} alt='' />
                                 </div>
@@ -416,9 +415,13 @@ function Home() {
             )
         )}
 
-      {/* Modal Slider sample */}
-      <div
-        className={'modal fade bd-example-modal-lg-slider-1'}
+      {/* Popup slider photo */}
+      {award &&
+      award.length &&
+      award.map(
+          (item, index) =>
+              item.isSliderPhoto && (<div
+        className={'modal fade bd-example-modal-lg-slider-'+index}
         tabIndex='-1'
         role='dialog'
         aria-labelledby='myLargeModalLabel'
@@ -431,15 +434,14 @@ function Home() {
                 <div className='container'>
                   {/* Slider sample */}
                   <div className='slickAmbassador'>
-                    {hallOfFame &&
-                      hallOfFame.length &&
-                      hallOfFame.map((item, index) => (
+                    {item.sliderPhoto &&
+                    item.sliderPhoto.length &&
+                    item.sliderPhoto.map((item, index) => (
                         <div className='amd-content text-center'>
                           <div className='amd-portrait'>
                             <img
                               className='m-auto'
-                              src={resourceURL + item.Path}
-                              alt='REMY & DERLIN'
+                              src={resourceURL + item}
                             />
                           </div>
                         </div>
@@ -452,6 +454,8 @@ function Home() {
           </div>
         </div>
       </div>
+              )
+      )}
 
       {/* Hall of fame */}
       {hallOfFame && hallOfFame.length && (
