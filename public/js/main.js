@@ -228,6 +228,12 @@ ScrollReveal().reveal('.awards-section', slideUp);
 ScrollReveal().reveal('.products-section-header', slideUp);
 ScrollReveal().reveal('.ambassador-container', slideUp);
 ScrollReveal().reveal('.address-component', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-0', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-1', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-2', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-3', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-4', slideUp);
+// ScrollReveal().reveal('.slider-photo-container-5', slideUp);
 
 //About Us Animation
 ScrollReveal().reveal('#about-us-content', slideUp);

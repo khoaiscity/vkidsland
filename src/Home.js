@@ -430,10 +430,10 @@ function Home() {
         <div className='modal-dialog modal-lg'>
           <div className='modal-content modal-content-slider bg-green'>
             <section className='ambassador-section'>
-              <div className='ambassador-container'>
+              <div className={'slider-photo-container-'+index}>
                 <div className='container'>
                   {/* Slider sample */}
-                  <div className='slickAward'>
+                  <div className='slickAward' style={{'margin-top':'30px'}}>
                     {item.sliderPhoto &&
                     item.sliderPhoto.length &&
                     item.sliderPhoto.map((item, index) => (
