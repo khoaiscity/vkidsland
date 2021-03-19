@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios'
 
 function Home() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
@@ -11,6 +12,7 @@ function Home() {
   const [ourProduct, setOurProduct] = useState(null);
   const [teamManager, setTeamManager] = useState(null);
   const [award, setAward] = useState(null);
+  const [dataFrom, setDataFrom] = useState({})
 
   useEffect(() => {
     if (headerSlider === null) {
@@ -67,6 +69,26 @@ function Home() {
         .then((response) => setAward(response.data));
     }
   }, [award]);
+
+  const handleOnchange = (event) => {
+    const { name, value } = event.target
+    dataFrom[name] = value
+  }
+
+  const hanldeOnSubmit = () => {
+    console.log("data", dataFrom)
+    axios({
+      method: "post",
+      url:`/api/touch-potential-member`,
+      data: dataFrom
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 
   return (
     <>
@@ -338,7 +360,7 @@ function Home() {
                                   type='button'
                                   className='btn-video green px-2 py-3'
                                   data-toggle='modal'
-                                  data-target={'.bd-example-modal-lg-slider-'+index}
+                                  data-target={'.bd-example-modal-lg-slider-' + index}
                                 >View Photo <i className='fa fa-play-circle px-1'></i></button>)}
                                 <div className='awards-img pt-2'>
                                   <img src={resourceURL + item.Logo} alt='' />
@@ -416,45 +438,45 @@ function Home() {
 
       {/* Popup slider photo */}
       {award &&
-      award.length &&
-      award.map(
+        award.length &&
+        award.map(
           (item, index) =>
-              item.isSliderPhoto && (<div
-        className={'modal fade bd-example-modal-lg-slider-'+index}
-        tabIndex='-1'
-        role='dialog'
-        aria-labelledby='myLargeModalLabel'
-        aria-hidden='true'
-      >
-        <div className='modal-dialog modal-lg'>
-          <div className='modal-content modal-content-slider bg-green'>
-            <section className='ambassador-section'>
-              <div className={'slider-photo-container-'+index}>
-                <div className='container'>
-                  {/* Slider sample */}
-                  <div className='slickAward' style={{'margin-top':'30px'}}>
-                    {item.sliderPhoto &&
-                    item.sliderPhoto.length &&
-                    item.sliderPhoto.map((item, index) => (
-                        <div className='amd-content text-center'>
-                          <div className='amd-portrait'>
-                            <img
-                              className='m-auto'
-                              src={resourceURL + item}
-                            />
-                          </div>
+            item.isSliderPhoto && (<div
+              className={'modal fade bd-example-modal-lg-slider-' + index}
+              tabIndex='-1'
+              role='dialog'
+              aria-labelledby='myLargeModalLabel'
+              aria-hidden='true'
+            >
+              <div className='modal-dialog modal-lg'>
+                <div className='modal-content modal-content-slider bg-green'>
+                  <section className='ambassador-section'>
+                    <div className={'slider-photo-container-' + index}>
+                      <div className='container'>
+                        {/* Slider sample */}
+                        <div className='slickAward' style={{ 'margin-top': '30px' }}>
+                          {item.sliderPhoto &&
+                            item.sliderPhoto.length &&
+                            item.sliderPhoto.map((item, index) => (
+                              <div className='amd-content text-center'>
+                                <div className='amd-portrait'>
+                                  <img
+                                    className='m-auto'
+                                    src={resourceURL + item}
+                                  />
+                                </div>
+                              </div>
+                            ))}
                         </div>
-                      ))}
-                  </div>
+                      </div>
+                    </div>
+                  </section>
+                  {/* Slider sample */}
                 </div>
               </div>
-            </section>
-            {/* Slider sample */}
-          </div>
-        </div>
-      </div>
-              )
-      )}
+            </div>
+            )
+        )}
 
       {/* Hall of fame */}
       {hallOfFame && hallOfFame.length && (
@@ -621,17 +643,19 @@ function Home() {
                   an email or even give us a call at 010-2775678
                 </p>
                 <div className='contact-form'>
-                  <input className='my-2' type='text' placeholder='Name*' />
-                  <input className='my-2' type='text' placeholder='Phone*' />
-                  <input className='my-2' type='text' placeholder='Email*' />
+                  <input className='my-2' type='text' placeholder='Name*' name="name" onChange={handleOnchange} />
+                  <input className='my-2' type='text' placeholder='Phone*' name="phone" onChange={handleOnchange} />
+                  <input className='my-2' type='text' placeholder='Email*' name="email" onChange={handleOnchange} />
                   <textarea
                     className='my-2'
                     name='message'
                     id='userMessage'
                     rows='4'
                     placeholder='Message'
+                    name="message"
+                    onChange={handleOnchange}
                   ></textarea>
-                  <button className='contact-send-btn style1-btn my-1'>
+                  <button className='contact-send-btn style1-btn my-1' onClick={hanldeOnSubmit}>
                     Send
                   </button>
                 </div>
