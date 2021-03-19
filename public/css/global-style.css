@@ -494,7 +494,7 @@ footer .reserved {
 
   .bg-partner3 {
     background: url(../assets/images/dr_eric/cover-dr-eric-mobile.jpg) no-repeat
-      center center;
+      top center;
     background-size: cover;
   }
 
