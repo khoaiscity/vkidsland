@@ -42,7 +42,7 @@ function Partner1() {
                   <h2>{member1 && (member1.Name)}</h2>
                   <div className='hw'/>
                   <p className='pt-5'>{member1 && (member1.Position)}</p>
-                  <p style={{'font-weight':'500','font-size':'1.4rem'}}>{member1 && (member1.Achievement)}</p>
+                  <p style={{'font-weight':'500','font-size':'1.4rem','text-transform':'capitalize'}}>{member1 && (member1.Achievement)}</p>
                 </div>
               </div>
             </div>
