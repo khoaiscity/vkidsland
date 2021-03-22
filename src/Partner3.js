@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 function Partner3() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-
   const [member1, setTeamMember1] = useState(null);
   const [member2, setTeamMember2] = useState(null);
   const [member3, setTeamMember3] = useState(null);
@@ -73,50 +72,14 @@ function Partner3() {
 
       <section>
         <div className='partner-img-slider'>
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo01.jpg'
-            alt='Img Eric 1'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo02.jpg'
-            alt='Img Eric 2'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo03.jpg'
-            alt='Img Eric 3'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo04.jpg'
-            alt='Img Eric 4'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo05.jpg'
-            alt='Img Eric 5'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo06.jpg'
-            alt='Img Eric 6'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo07.jpg'
-            alt='Img Eric 7'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo08.jpg'
-            alt='Img Eric 8'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo09.jpg'
-            alt='Img Eric 9'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo10.jpg'
-            alt='Img Eric 10'
-          />
-          <img
-            src='/assets/images/dr_eric/dr-eric-photo11.jpg'
-            alt='Img Eric 11'
-          />
+          {member3 && member3.sliderPhoto.length && (
+              member3.sliderPhoto.map((item, index) => (
+                  <img
+                      src={resourceURL + item}
+                      alt={member3 && (member3.Name)}
+                  />
+              ))
+          )}
         </div>
       </section>
 

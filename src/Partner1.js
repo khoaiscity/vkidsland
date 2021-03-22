@@ -72,50 +72,14 @@ function Partner1() {
 
       <section>
         <div className='partner-img-slider'>
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo01.jpg'
-            alt='Img Vivian 1'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo02.jpg'
-            alt='Img Vivian 2'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo03.jpg'
-            alt='Img Vivian 3'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo04.jpg'
-            alt='Img Vivian 4'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo05.jpg'
-            alt='Img Vivian 5'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo06.jpg'
-            alt='Img Vivian 6'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo07.jpg'
-            alt='Img Vivian 7'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo08.jpg'
-            alt='Img Vivian 8'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo09.jpg'
-            alt='Img Vivian 9'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo10.jpg'
-            alt='Img Vivian 10'
-          />
-          <img
-            src='/assets/images/dr_vivian/dr-vivian-photo11.jpg'
-            alt='Img Vivian 11'
-          />
+          {member1 && member1.sliderPhoto.length && (
+            member1.sliderPhoto.map((item, index) => (
+              <img
+                src={resourceURL + item}
+                alt={member1 && (member1.Name)}
+              />
+            ))
+          )}
         </div>
       </section>
 

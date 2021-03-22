@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 function Partner2() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-
   const [member1, setTeamMember1] = useState(null);
   const [member2, setTeamMember2] = useState(null);
   const [member3, setTeamMember3] = useState(null);
@@ -74,54 +73,14 @@ function Partner2() {
 
       <section>
         <div className='partner-img-slider'>
-          <img
-            src='assets/images/dr_denise/dr-denise-photo01.jpg'
-            alt='Img Denise 1'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo02.jpg'
-            alt='Img Denise 2'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo03.jpg'
-            alt='Img Denise 3'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo04.jpg'
-            alt='Img Denise 4'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo05.jpg'
-            alt='Img Denise 5'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo06.jpg'
-            alt='Img Denise 6'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo07.jpg'
-            alt='Img Denise 7'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo08.jpg'
-            alt='Img Denise 8'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo09.jpg'
-            alt='Img Denise 9'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo10.jpg'
-            alt='Img Denise 10'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo11.jpg'
-            alt='Img Denise 11'
-          />
-          <img
-            src='assets/images/dr_denise/dr-denise-photo12.jpg'
-            alt='Img Denise 12'
-          />
+          {member2 && member2.sliderPhoto.length > 0 && (
+            member2.sliderPhoto.map((item, index) => (
+              <img
+                src={resourceURL + item}
+                alt={member2 && (member2.Name)}
+              />
+            ))
+          )}
         </div>
       </section>
 
