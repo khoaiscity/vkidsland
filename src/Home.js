@@ -84,6 +84,11 @@ function Home() {
     })
     .then(function (response) {
       console.log(response);
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('userMessage').value = '';
+      alert('Thank you for getting in touch!');
     })
     .catch(function (error) {
       console.log(error);
@@ -643,21 +648,19 @@ function Home() {
                   an email or even give us a call at 010-2775678
                 </p>
                 <div className='contact-form'>
-                  <input className='my-2' type='text' placeholder='Name*' name="name" onChange={handleOnchange} />
-                  <input className='my-2' type='text' placeholder='Phone*' name="phone" onChange={handleOnchange} />
-                  <input className='my-2' type='text' placeholder='Email*' name="email" onChange={handleOnchange} />
+                  <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} />
+                  <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} />
+                  <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} />
                   <textarea
                     className='my-2'
                     name='message'
                     id='userMessage'
                     rows='4'
                     placeholder='Message'
-                    name="message"
+                    name='message'
                     onChange={handleOnchange}
                   ></textarea>
-                  <button className='contact-send-btn style1-btn my-1' onClick={hanldeOnSubmit}>
-                    Send
-                  </button>
+                  <button className='contact-send-btn style1-btn my-1' onClick={hanldeOnSubmit}>Send</button>
                 </div>
               </div>
             </div>

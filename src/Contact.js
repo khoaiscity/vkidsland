@@ -1,7 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Contact() {
+  const [dataFrom, setDataFrom] = useState({})
+  const handleOnchange = (event) => {
+    const { name, value } = event.target
+    dataFrom[name] = value
+  }
+  const hanldeOnSubmit = () => {
+    axios({
+      method: "post",
+      url:`/api/touch-potential-member`,
+      data: dataFrom
+    })
+        .then(function (response) {
+          console.log(response);
+          document.getElementById('name').value = '';
+          document.getElementById('phone').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('userMessage').value = '';
+          alert('Thank you for getting in touch!');
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+  }
   return (
     <>
       <section className='banner-section bg-contact'>
@@ -94,13 +118,13 @@ export default function Contact() {
             <div className='col-12 col-md-8'>
               <div className='row contact-form'>
                 <div className='col-12 col-md-4'>
-                  <input className='my-2' type='text' placeholder='Name*' />
+                  <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange}/>
                 </div>
                 <div className='col-12 col-md-4'>
-                  <input className='my-2' type='text' placeholder='Phone*' />
+                  <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange}/>
                 </div>
                 <div className='col-12 col-md-4'>
-                  <input className='my-2' type='text' placeholder='Email*' />
+                  <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange}/>
                 </div>
                 <div className='col-12'>
                   <textarea
@@ -109,10 +133,12 @@ export default function Contact() {
                     id='userMessage'
                     rows='4'
                     placeholder='Message'
+                    name='message'
+                    onChange={handleOnchange}
                   ></textarea>
                 </div>
                 <div className='col-6'>
-                  <button className='default-btn px-5 white my-1'>Send</button>
+                  <button className='default-btn px-5 white my-1' onClick={hanldeOnSubmit}>Send</button>
                 </div>
               </div>
             </div>
