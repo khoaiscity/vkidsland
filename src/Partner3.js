@@ -58,7 +58,7 @@ function Partner3() {
                 <h2 className='text-title partner-name font-weight-900'>{member3 && (member3.Name)}</h2>
                 <hr />
                 <p className='pt-4' style={{'font-size':'1.1rem','font-weight':'600'}}>{member3 && (member3.Intro)}</p>
-                <p style={{'font-size':'1.1rem','font-weight':'500'}}>{member3 && (member3.Intro)}<br/>{member3 && (member3.Intro2)}</p>
+                <p style={{'font-size':'1.1rem','font-weight':'500'}}>{member3 && (member3.Intro2)}</p>
               </div>
             </div>
             <div className='col-12 col-lg-8 pt-2'>
