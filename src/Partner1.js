@@ -42,6 +42,7 @@ function Partner1() {
                   <h2>{member1 && (member1.Name)}</h2>
                   <div className='hw'/>
                   <p className='pt-5'>{member1 && (member1.Position)}</p>
+                  <p style={{'font-weight':'500','font-size':'1.4rem'}}>{member1 && (member1.Achievement)}</p>
                 </div>
               </div>
             </div>
@@ -56,7 +57,8 @@ function Partner1() {
               <div className='partner-details text-uppercase text-left black'>
                 <h2 className='text-title partner-name font-weight-900'>{member1 && (member1.Name)}</h2>
                 <hr />
-                <p className='text-content pt-4'>{member1 && (member1.Position)}</p>
+                <p className='pt-4' style={{'font-size':'1.1rem','font-weight':'600'}}>{member1 && (member1.Intro)}</p>
+                <p style={{'font-size':'1.1rem','font-weight':'500'}}>{member1 && (member1.Intro2)}</p>
               </div>
             </div>
             <div className='col-12 col-lg-8 pt-2'>

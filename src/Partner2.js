@@ -38,12 +38,13 @@ function Partner2() {
         <div className='banner-content'>
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-md-6'></div>
-              <div className='col-12 col-md-6'>
+              <div className='col-12 col-md-3'></div>
+              <div className='col-12 col-md-9'>
                 <div className='banner-title text-center text-uppercase'>
                   <h2>{member2 && (member2.Name)}</h2>
                   <div className='hw'></div>
                   <p className='pt-5'>{member2 && (member2.Position)}</p>
+                  <p style={{'font-weight':'500','font-size':'1.4rem'}}>{member2 && (member2.Achievement)}</p>
                 </div>
               </div>
             </div>
@@ -58,7 +59,8 @@ function Partner2() {
               <div className='partner-details text-uppercase text-left black'>
                 <h2 className='text-title partner-name font-weight-900'>{member2 && (member2.Name)}</h2>
                 <hr />
-                <p className='text-content pt-4'>{member2 && (member2.Position)}</p>
+                <p className='pt-4' style={{'font-size':'1.1rem','font-weight':'600'}}>{member2 && (member2.Intro)}</p>
+                <p style={{'font-size':'1.1rem','font-weight':'500'}}>{member2 && (member2.Intro2)}</p>
               </div>
             </div>
             <div className='col-12 col-lg-8 pt-2'>
