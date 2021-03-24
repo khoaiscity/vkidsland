@@ -13,6 +13,10 @@ function Home() {
   const [teamManager, setTeamManager] = useState(null);
   const [award, setAward] = useState(null);
   const [dataFrom, setDataFrom] = useState({})
+  const [err, setErr] = useState([])
+  const [disabled, setDisabled] = useState(true)
+
+
 
   useEffect(() => {
     if (headerSlider === null) {
@@ -73,28 +77,42 @@ function Home() {
   const handleOnchange = (event) => {
     const { name, value } = event.target
     dataFrom[name] = value
+    if (name != "message") {
+      if (value == "") {
+        err.push(name)
+        setErr([...err])
+        setDisabled(true)
+      } else {
+        const index = err.indexOf(name);
+        if (index > -1) {
+          err.splice(index, 1);
+        }
+        setErr([...err])
+      }
+    }
+    if (err.length ==0 && dataFrom.hasOwnProperty("name") && dataFrom.hasOwnProperty("phone") &&dataFrom.hasOwnProperty("email")) {
+      setDisabled(false )
+    } 
   }
 
   const hanldeOnSubmit = () => {
-    console.log("data", dataFrom)
     axios({
       method: "post",
-      url:`/api/touch-potential-member`,
+      url: `/api/touch-potential-member`,
       data: dataFrom
     })
-    .then(function (response) {
-      console.log(response);
-      document.getElementById('name').value = '';
-      document.getElementById('phone').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('userMessage').value = '';
-      alert('Thank you for getting in touch!');
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+      .then(function (response) {
+        console.log(response);
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('userMessage').value = '';
+        alert('Thank you for getting in touch!');
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
-
   return (
     <>
       {headerSlider && (
@@ -648,9 +666,18 @@ function Home() {
                   an email or even give us a call at 010-2775678
                 </p>
                 <div className='contact-form'>
-                  <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} />
-                  <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} />
-                  <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} />
+                  <div>
+                    <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} />
+                    {err.includes("name") ? <p className="error">Filed Name is required!</p> : ''}
+                  </div>
+                  <div>
+                    <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} />
+                    {err.includes("phone") ? <p className="error">Filed Phone is required!</p> : ''}
+                  </div>
+                  <div>
+                    <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} />
+                    {err.includes("email") ? <p className="error">Filed Email is required!</p> : ''}
+                  </div>
                   <textarea
                     className='my-2'
                     name='message'
@@ -660,7 +687,7 @@ function Home() {
                     name='message'
                     onChange={handleOnchange}
                   ></textarea>
-                  <button className='contact-send-btn style1-btn my-1' onClick={hanldeOnSubmit}>Send</button>
+                  <button className={"contact-send-btn style1-btn my-1 " + (disabled ? "disabled" : "")} onClick={disabled ? () => {} : hanldeOnSubmit}>Send</button>
                 </div>
               </div>
             </div>

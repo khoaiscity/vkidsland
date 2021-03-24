@@ -518,4 +518,13 @@ footer .reserved {
 .modal-content-slider {
   padding: 0 60px;
 }
+
+.disabled {
+  cursor: not-allowed !important;   
+}
+
+.error {
+  color: #f04134;
+  margin: 0;
+}
 /* End of global style */
