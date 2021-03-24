@@ -37,7 +37,7 @@ function Partner2() {
         <div className='banner-content'>
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-md-3'></div>
+              <div className='col-12 col-md-2'></div>
               <div className='col-12 col-md-9'>
                 <div className='banner-title text-center text-uppercase'>
                   <h2>{member2 && (member2.Name)}</h2>
@@ -46,6 +46,7 @@ function Partner2() {
                   <p style={{'font-weight':'500','font-size':'1.4rem','text-transform':'capitalize'}}>{member2 && (member2.Achievement)}</p>
                 </div>
               </div>
+              <div className='col-12 col-md-1'></div>
             </div>
           </div>
         </div>

@@ -134,9 +134,12 @@ button:hover {
 }
 
 .bg-partner2 {
-  background: url(../assets/images/dr_denise/cover-dr-denise.jpg) no-repeat
-    center center fixed;
+  background: url(../assets/images/dr_denise/cover-dr-denise.jpg) no-repeat top center fixed;
   background-size: cover;
+}
+
+.bg-partner2 .container {
+  padding-top:110px;
 }
 
 .bg-partner3 {
