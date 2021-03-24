@@ -667,15 +667,15 @@ function Home() {
                 </p>
                 <div className='contact-form'>
                   <div>
-                    <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} />
+                    <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} onBlur={handleOnchange}/>
                     {err.includes("name") ? <p className="error">Filed Name is required!</p> : ''}
                   </div>
                   <div>
-                    <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} />
+                    <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} onBlur={handleOnchange}/>
                     {err.includes("phone") ? <p className="error">Filed Phone is required!</p> : ''}
                   </div>
                   <div>
-                    <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} />
+                    <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} onBlur={handleOnchange}/>
                     {err.includes("email") ? <p className="error">Filed Email is required!</p> : ''}
                   </div>
                   <textarea
