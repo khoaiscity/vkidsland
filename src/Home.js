@@ -93,6 +93,17 @@ function Home() {
     } 
   }
 
+  const handleOnBlur = (event) => {
+    const { name, value } = event.target
+    if (name != "message") {
+      if (value == "") {
+        err.push(name)
+        setErr([...err])
+        setDisabled(true)
+      } 
+    }
+  }
+
   const hanldeOnSubmit = () => {
     axios({
       method: "post",
@@ -105,6 +116,8 @@ function Home() {
         document.getElementById('phone').value = '';
         document.getElementById('email').value = '';
         document.getElementById('userMessage').value = '';
+        setDisabled(true)
+        setDataFrom({})
         alert('Thank you for getting in touch!');
       })
       .catch(function (error) {
@@ -665,15 +678,15 @@ function Home() {
                 </p>
                 <div className='contact-form'>
                   <div>
-                    <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} onBlur={handleOnchange}/>
+                    <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} onBlur={handleOnBlur}/>
                     {err.includes("name") ? <p className="error">Name is required!</p> : ''}
                   </div>
                   <div>
-                    <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} onBlur={handleOnchange}/>
+                    <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} onBlur={handleOnBlur}/>
                     {err.includes("phone") ? <p className="error">Phone is required!</p> : ''}
                   </div>
                   <div>
-                    <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} onBlur={handleOnchange}/>
+                    <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} onBlur={handleOnBlur}/>
                     {err.includes("email") ? <p className="error">Email is required!</p> : ''}
                   </div>
                   <textarea
