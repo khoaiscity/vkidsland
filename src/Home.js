@@ -16,8 +16,6 @@ function Home() {
   const [err, setErr] = useState([])
   const [disabled, setDisabled] = useState(true)
 
-
-
   useEffect(() => {
     if (headerSlider === null) {
       fetch('/api/slider?page=home&key=header-banner')
@@ -668,15 +666,15 @@ function Home() {
                 <div className='contact-form'>
                   <div>
                     <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} onBlur={handleOnchange}/>
-                    {err.includes("name") ? <p className="error">Filed Name is required!</p> : ''}
+                    {err.includes("name") ? <p className="error">Name is required!</p> : ''}
                   </div>
                   <div>
                     <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} onBlur={handleOnchange}/>
-                    {err.includes("phone") ? <p className="error">Filed Phone is required!</p> : ''}
+                    {err.includes("phone") ? <p className="error">Phone is required!</p> : ''}
                   </div>
                   <div>
                     <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} onBlur={handleOnchange}/>
-                    {err.includes("email") ? <p className="error">Filed Email is required!</p> : ''}
+                    {err.includes("email") ? <p className="error">Email is required!</p> : ''}
                   </div>
                   <textarea
                     className='my-2'
