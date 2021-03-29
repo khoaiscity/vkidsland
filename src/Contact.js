@@ -1,30 +1,62 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Contact() {
   const [dataFrom, setDataFrom] = useState({})
+  const [err, setErr] = useState([])
+  const [disabled, setDisabled] = useState(true)
+
   const handleOnchange = (event) => {
     const { name, value } = event.target
     dataFrom[name] = value
+    if (name != "message") {
+      if (value == "") {
+        err.push(name)
+        setErr([...err])
+        setDisabled(true)
+      } else {
+        const index = err.indexOf(name);
+        if (index > -1) {
+          err.splice(index, 1);
+        }
+        setErr([...err])
+      }
+    }
+    if (err.length == 0 && dataFrom.hasOwnProperty("name") && dataFrom.hasOwnProperty("phone") && dataFrom.hasOwnProperty("email")) {
+      setDisabled(false)
+    }
+  }
+
+  const handleOnBlur = (event) => {
+    const { name, value } = event.target
+    if (name != "message") {
+      if (value == "") {
+        err.push(name)
+        setErr([...err])
+        setDisabled(true)
+      }
+    }
   }
   const hanldeOnSubmit = () => {
     axios({
       method: "post",
-      url:`/api/touch-potential-member`,
+      url: `/api/touch-potential-member`,
       data: dataFrom
     })
-        .then(function (response) {
-          console.log(response);
-          document.getElementById('name').value = '';
-          document.getElementById('phone').value = '';
-          document.getElementById('email').value = '';
-          document.getElementById('userMessage').value = '';
-          alert('Thank you for getting in touch!');
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      .then(function (response) {
+        console.log(response);
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('userMessage').value = '';
+        setDisabled(true)
+        setDataFrom({})
+        alert('Thank you for getting in touch!');
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
   return (
     <>
@@ -118,13 +150,16 @@ export default function Contact() {
             <div className='col-12 col-md-8'>
               <div className='row contact-form'>
                 <div className='col-12 col-md-4'>
-                  <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange}/>
+                  <input id='name' className='my-2' type='text' placeholder='Name*' name='name' onChange={handleOnchange} onBlur={handleOnBlur} />
+                  {err.includes("name") ? <p className="error">Name is required!</p> : ''}
                 </div>
                 <div className='col-12 col-md-4'>
-                  <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange}/>
+                  <input id='phone' className='my-2' type='text' placeholder='Phone*' name='phone' onChange={handleOnchange} onBlur={handleOnBlur}/>
+                  {err.includes("phone") ? <p className="error">Phone is required!</p> : ''}
                 </div>
                 <div className='col-12 col-md-4'>
-                  <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange}/>
+                  <input id='email' className='my-2' type='text' placeholder='Email*' name='email' onChange={handleOnchange} onBlur={handleOnBlur} />
+                  {err.includes("email") ? <p className="error">Email is required!</p> : ''}
                 </div>
                 <div className='col-12'>
                   <textarea
@@ -138,7 +173,7 @@ export default function Contact() {
                   ></textarea>
                 </div>
                 <div className='col-6'>
-                  <button className='default-btn px-5 white my-1' onClick={hanldeOnSubmit}>Send</button>
+                  <button  className={"default-btn px-5 white my-1 " + (disabled ? "disabled" : "")} onClick={disabled ? () => {} : hanldeOnSubmit}>Send</button>
                 </div>
               </div>
             </div>
