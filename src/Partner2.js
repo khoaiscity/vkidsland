@@ -37,8 +37,8 @@ function Partner2() {
         <div className='banner-content'>
           <div className='container'>
             <div className='row'>
-              <div className='col-12 col-md-2'></div>
-              <div className='col-12 col-md-9'>
+              <div className='col-12 col-md-4'></div>
+              <div className='col-12 col-md-8'>
                 <div className='banner-title text-center text-uppercase'>
                   <h2>{member2 && (member2.Name)}</h2>
                   <div className='hw'></div>
