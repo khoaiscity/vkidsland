@@ -75,8 +75,8 @@ function Home() {
   const handleOnchange = (event) => {
     const { name, value } = event.target
     dataFrom[name] = value
-    if (name != "message") {
-      if (value == "") {
+    if (name !== "message") {
+      if (value === "") {
         err.push(name)
         setErr([...err])
         setDisabled(true)
@@ -88,15 +88,15 @@ function Home() {
         setErr([...err])
       }
     }
-    if (err.length ==0 && dataFrom.hasOwnProperty("name") && dataFrom.hasOwnProperty("phone") &&dataFrom.hasOwnProperty("email")) {
+    if (err.length === 0 && dataFrom.hasOwnProperty("name") && dataFrom.hasOwnProperty("phone") &&dataFrom.hasOwnProperty("email")) {
       setDisabled(false )
     } 
   }
 
   const handleOnBlur = (event) => {
     const { name, value } = event.target
-    if (name != "message") {
-      if (value == "") {
+    if (name !== "message") {
+      if (value === "") {
         err.push(name)
         setErr([...err])
         setDisabled(true)
