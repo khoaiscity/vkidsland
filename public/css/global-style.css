@@ -154,8 +154,7 @@ button:hover {
 }
 
 .bg-explore {
-  background: url(../assets/images/explore-more.png) no-repeat center center
-    fixed;
+  background: url(../assets/images/explore-more.png) no-repeat top center fixed;
   background-size: cover;
 }
 
