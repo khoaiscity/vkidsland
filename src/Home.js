@@ -648,9 +648,7 @@ function Home() {
                           href='https://wa.me/60106510906'
                           rel='noopener noreferrer'
                           target='_blank'
-                        >
-                          010-6510906
-                        </a>
+                        >010-6510906</a>
                       </p>
                     </div>
                     <p className='py-2'>Email: support@vkidstrendsb.com</p>

@@ -100,11 +100,12 @@ export default function Contact() {
                   <p className='d-flex'>
                     <i className='icon-whatsapp-white mr-2'></i>
                     WhatsApp: &nbsp;
-                    <Link
+                    <a
                       className='white'
-                      to='https://wa.me/60106510906'
+                      href='https://wa.me/60106510906'
+                      rel='noopener noreferrer'
                       target='_blank'
-                    >010-6510906</Link>
+                    >010-6510906</a>
                   </p>
                 </div>
                 <p>Email: support@vkidstrendsb.com</p>
@@ -205,11 +206,12 @@ export default function Contact() {
                   <p className='d-flex'>
                     <i className='icon-whatsapp-white mr-2'></i>
                     WhatsApp: &nbsp;
-                    <Link
+                    <a
                       className='white'
                       target='_blank'
-                      to='https://wa.me/60106510906'
-                    >010-6510906</Link>
+                      href='https://wa.me/60106510906'
+                      rel='noopener noreferrer'
+                    >010-6510906</a>
                   </p>
                 </div>
                 <p>Email: support@vkidstrendsb.com</p>
