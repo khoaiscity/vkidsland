@@ -236,7 +236,7 @@ function Home() {
                 className='embed-responsive-item js-videoIframe'
                 src=''
                 frameBorder='0'
-                allow='accelerometer; autoplay; encrypted-media; gyroscope;'
+                allow='accelerometer; encrypted-media; gyroscope;'
                 data-src={resourceURL + mainVideo.Path}
               ></iframe>
 
