@@ -234,7 +234,7 @@ function Home() {
                 title='video'
                 id='vkid-video'
                 className='embed-responsive-item js-videoIframe'
-                src={resourceURL + mainVideo.Path}
+                src=''
                 frameBorder='0'
                 allow='accelerometer; autoplay; encrypted-media; gyroscope;'
                 data-src={resourceURL + mainVideo.Path}
