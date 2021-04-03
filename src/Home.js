@@ -111,7 +111,6 @@ function Home() {
       data: dataFrom
     })
       .then(function (response) {
-        console.log(response);
         document.getElementById('name').value = '';
         document.getElementById('phone').value = '';
         document.getElementById('email').value = '';
@@ -120,9 +119,7 @@ function Home() {
         setDataFrom({})
         alert('Thank you for getting in touch!');
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .catch(function (error) {});
   }
   return (
     <>
@@ -239,13 +236,9 @@ function Home() {
                 allow='accelerometer; encrypted-media; gyroscope;'
                 data-src={resourceURL + mainVideo.Path}
               ></iframe>
-
               <div
                 className='videoPoster js-videoPoster'
-                style={{
-                  backgroundImage: `url(${resourceURL + mainVideo.Cover})`,
-                }}
-              >
+                style={{backgroundImage: `url(${resourceURL + mainVideo.Cover})`}}>
                 <div className='videoPoster_overlay_hover'>
                   <i className='video_play fa fa-play'></i>
                 </div>

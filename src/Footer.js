@@ -27,9 +27,7 @@ function Footer() {
                 <span className='px-2'>Social Media Privacy Policy</span>
               </a>
             </div>
-            <div className='reserved pt-2 px-2'>
-              AJL932213 | © 2021 VKIDS TREND. All Rights Reserved
-            </div>
+            <div className='reserved pt-2 px-2'>AJL932213 | © 2021 VKIDS TREND. All Rights Reserved</div>
           </div>
 
           <div className='col-md-5 col-4'>

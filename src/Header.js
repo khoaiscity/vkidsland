@@ -62,20 +62,18 @@ function Header() {
                       aria-labelledby='navbarDropdown'
                     >
                       <NavLink className='dropdown-item' to='/partner1'>
-                        Dr.Vivian Ker
+                        Dr. Vivian Ker
                       </NavLink>
                       <NavLink className='dropdown-item' to='/partner2'>
-                        Dr.Denise Lim
+                        Dr. Denise Lim
                       </NavLink>
                       <NavLink className='dropdown-item' to='/partner3'>
-                        Dr.Eric Ang
+                        Dr. Eric Ang
                       </NavLink>
                     </div>
                   </li>
                   <li className='nav-item'>
-                    <NavLink className='nav-link ml-1' to='/products'>
-                      Our Products
-                    </NavLink>
+                    <NavLink className='nav-link ml-1' to='/products'>Our Products</NavLink>
                   </li>
                   <li className='nav-item'>
                     <NavLink className='nav-link ml-1' to='/contact'>Contact</NavLink>

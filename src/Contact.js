@@ -44,7 +44,6 @@ export default function Contact() {
       data: dataFrom
     })
       .then(function (response) {
-        console.log(response);
         document.getElementById('name').value = '';
         document.getElementById('phone').value = '';
         document.getElementById('email').value = '';
@@ -53,9 +52,7 @@ export default function Contact() {
         setDataFrom({})
         alert('Thank you for getting in touch!');
       })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .catch(function (error) {});
   }
   return (
     <>
