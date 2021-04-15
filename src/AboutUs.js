@@ -59,8 +59,7 @@ export default function AboutUs() {
                       <div className='text-center'>
                         <p className='font-1'>
                           {' '}
-                          “To be one of Malaysia’ top learning e-learning
-                          company.”
+                          “To be one of Malaysia’ top leading e-learning company.”
                         </p>
                       </div>
                     </div>
