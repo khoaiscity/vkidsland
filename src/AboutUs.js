@@ -39,10 +39,7 @@ export default function AboutUs() {
                 <div className='row'>
                   <div className='col-md-12'>
                     <div className='abt-content black d-flex justify-content-center text-center'>
-                      <p className='font-1'>
-                        {' '}
-                        “Together We Achieve The EXTRAORDINARY”
-                      </p>
+                      <p className='font-1'>“Together We Achieve The EXTRAORDINARY”</p>
                     </div>
                   </div>
                 </div>
@@ -57,10 +54,7 @@ export default function AboutUs() {
                   <div className='col-md-12'>
                     <div className='abt-content black d-flex justify-content-center text-center'>
                       <div className='text-center'>
-                        <p className='font-1'>
-                          {' '}
-                          “To be one of Malaysia’ top leading e-learning company.”
-                        </p>
+                        <p className='font-1'>“To be one of Malaysia’ top leading e-learning company.”</p>
                       </div>
                     </div>
                   </div>
