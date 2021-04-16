@@ -33,7 +33,7 @@ export default function AboutUs() {
           <div className='row'>
             <div className='col-12 col-md-6'>
               <fieldset className='field-container'>
-                <legend style={{ margin: 'auto' }}>
+                <legend style={{margin: 'auto'}}>
                   <h3 className='abt-section text-uppercase' style={{color:'black','text-align':'center'}}>Vision</h3>
                 </legend>
                 <div className='row'>
@@ -77,7 +77,7 @@ export default function AboutUs() {
             <div className='col-lg-12'>
               <div className='code-value-header text-center text-uppercase'>
                 {/*<h1>Core Values</h1>*/}
-                <hr style={{ margin: 'auto' }} />
+                <hr style={{margin: 'auto'}} />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function AboutUs() {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='core-values text-center'>
-                          <img src='/assets/images/core_values.svg' alt='Core Values' />
+                <img src='/assets/images/core_values.svg' alt='Core Values' />
               </div>
             </div>
             {/*<div className='col-md-3 col-6'>*/}
