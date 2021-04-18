@@ -259,8 +259,7 @@ function Home() {
                   founders which provides a platform for Malaysian students
                   ranging from Pre-school - Secondary Form 5, believes
                   e-learning is a New Age Learning for all Malaysian students
-                  today!
-                </p>
+                  today!</p>
               </div>
             </div>
             {teamManager && teamManager.length && (
@@ -281,17 +280,11 @@ function Home() {
                           </h4>
                           <p className='team-content-text'>{item.Position}</p>
                           <div className='hw'></div>
-                          <p className='team-content-info py-3'>
-                            {item.Intro}
-                            <br />
-                            {item.Intro2}
-                          </p>
+                          <p className='team-content-info py-3'>{item.Intro}<br />{item.Intro2}</p>
                           <NavLink
                             className='style1-btn'
                             to={'/partner' + (index + 1)}
-                          >
-                            Read More
-                          </NavLink>
+                          >Read More</NavLink>
                         </div>
                       </div>
                     </div>
@@ -311,7 +304,7 @@ function Home() {
               <div className='col-lg-12'>
                 <div className='products-section-header text-center text-uppercase'>
                   <h1>Our Products</h1>
-                  <hr style={{ margin: 'auto' }} />
+                  <hr style={{margin: 'auto'}} />
                 </div>
               </div>
             </div>
@@ -341,7 +334,7 @@ function Home() {
               <div className='col-lg-12'>
                 <div className='awards-section-header text-center text-uppercase'>
                   <h1>Awards & Recognition</h1>
-                  <hr style={{ margin: 'auto' }} />
+                  <hr style={{margin: 'auto'}} />
                 </div>
               </div>
             </div>
@@ -364,9 +357,7 @@ function Home() {
                             <div className='bounceInLeft'>
                               <div className='awards-section-content text-center black'>
                                 <div className='py- awards-header'>
-                                  <h5 className='font-weight-bold'>
-                                    {item.Title}
-                                  </h5>
+                                  <h5 className='font-weight-bold'>{item.Title}</h5>
                                 </div>
                                 <div className='awards-content'>
                                   <span>{item.Description}</span>
