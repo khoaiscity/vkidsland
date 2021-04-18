@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 
 export default function Products() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
-
   const [mainVideo, setMainVideo] = useState(null);
   const [slider, setSlider] = useState(null);
 
@@ -150,9 +149,7 @@ export default function Products() {
                   className='style1-btn px-5 py-3'
                   rel='noopener noreferrer'
                   target='_blank'
-                >
-                  Find Out More
-                </a>
+                >Find Out More</a>
               </div>
             </div>
           </div>

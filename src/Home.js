@@ -163,9 +163,7 @@ function Home() {
             </div>
 
             <div className='carousel-caption'>
-              <NavLink className='text-uppercase white style2-btn' to='about'>
-                About Us
-              </NavLink>
+              <NavLink className='text-uppercase white style2-btn' to='about'>About Us</NavLink>
             </div>
             <a
               className='banner-prev carousel-control-prev'

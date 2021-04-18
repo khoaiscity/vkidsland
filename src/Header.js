@@ -41,9 +41,7 @@ function Header() {
                     </NavLink>
                   </li>
                   <li className='nav-item'>
-                    <NavLink className='nav-link ml-1' to='about'>
-                      About Us
-                    </NavLink>
+                    <NavLink className='nav-link ml-1' to='about'>About Us</NavLink>
                   </li>
                   <li className='nav-item dropdown'>
                     <a
@@ -54,22 +52,14 @@ function Header() {
                       data-toggle='dropdown'
                       aria-haspopup='true'
                       aria-expanded='false'
-                    >
-                      Management Team
-                    </a>
+                    >Management Team</a>
                     <div
                       className='dropdown-menu'
                       aria-labelledby='navbarDropdown'
                     >
-                      <NavLink className='dropdown-item' to='/partner1'>
-                        Dr. Vivian Ker
-                      </NavLink>
-                      <NavLink className='dropdown-item' to='/partner2'>
-                        Dr. Denise Lim
-                      </NavLink>
-                      <NavLink className='dropdown-item' to='/partner3'>
-                        Dr. Eric Ang
-                      </NavLink>
+                      <NavLink className='dropdown-item' to='/partner1'>Dr. Vivian Ker</NavLink>
+                      <NavLink className='dropdown-item' to='/partner2'>Dr. Denise Lim</NavLink>
+                      <NavLink className='dropdown-item' to='/partner3'>Dr. Eric Ang</NavLink>
                     </div>
                   </li>
                   <li className='nav-item'>

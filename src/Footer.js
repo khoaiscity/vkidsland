@@ -18,7 +18,7 @@ function Footer() {
           <div className='col-md-7 col-8'>
             <div className='d-flex flex-column flex-md-row'>
               <a href='#footer'>
-                <span className='px-2'>Term & Conditions </span>
+                <span className='px-2'>Term & Conditions</span>
               </a>
               <a href='#footer'>
                 <span className='px-2'>Privacy Policy</span>
