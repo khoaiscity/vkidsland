@@ -132,9 +132,7 @@ export default function Contact() {
           <div className='row'>
             <div className='col-12 col-md-4'>
               <div className='text-left white'>
-                <h2 className='text-title font-weight-700 text-uppercase'>
-                  Get in touch
-                </h2>
+                <h2 className='text-title font-weight-700 text-uppercase'>Get in touch</h2>
                 <hr />
                 <p className='line-hg-1 pt-4'>
                   Our team is here to provide you with more information and
@@ -186,22 +184,14 @@ export default function Contact() {
                 <img src='/assets/icons/vkid-logo.png' alt='Logo' />
                 <div className='hw'></div>
                 <div className='address-content pt-3'>
-                  <h3 className='py-4 font-weight-700 text-uppercase'>
-                    PENANG OFFICE
-                  </h3>
-                  <p>
-                    72-3-59, Arena Curve, Jalan Mahsuri, 11950 Bayan Lepas,
-                    Penang.
-                  </p>
+                  <h3 className='py-4 font-weight-700 text-uppercase'>PENANG OFFICE</h3>
+                  <p>72-3-59, Arena Curve, Jalan Mahsuri, 11950 Bayan Lepas, Penang.</p>
                 </div>
                 <div className='contact-info d-inline-block '>
                   <p className='d-flex'>
-                    <i className='icon-phone-white mr-2'></i>
-                    General Line: &nbsp;010-2775678
-                  </p>
+                    <i className='icon-phone-white mr-2'></i>General Line: &nbsp;010-2775678</p>
                   <p className='d-flex'>
-                    <i className='icon-whatsapp-white mr-2'></i>
-                    WhatsApp: &nbsp;
+                    <i className='icon-whatsapp-white mr-2'></i>WhatsApp: &nbsp;
                     <a
                       className='white'
                       target='_blank'

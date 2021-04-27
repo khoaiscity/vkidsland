@@ -36,9 +36,7 @@ function Header() {
               >
                 <ul className='navbar-nav align-items-center ml-auto text-right text-uppercase font-weight-bold'>
                   <li className='nav-item'>
-                    <NavLink className='nav-link ml-1' to='/'>
-                      Home
-                    </NavLink>
+                    <NavLink className='nav-link ml-1' to='/'>Home</NavLink>
                   </li>
                   <li className='nav-item'>
                     <NavLink className='nav-link ml-1' to='about'>About Us</NavLink>
