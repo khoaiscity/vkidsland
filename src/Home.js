@@ -581,9 +581,7 @@ function Home() {
                         <i className='video_play fa fa-play'></i>
                       </div>
                     </div>
-                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>
-                      {item.Title}
-                    </h1>
+                    <h1 className='pt-4 text-content font-weight-700 text-uppercase text-center'>{item.Title}</h1>
                   </a>
                 </div>
               ))}
@@ -604,27 +602,16 @@ function Home() {
                   </div>
                   <div className='headquater-content'>
                     <h2 className='text-uppercase'>HEADQUARTERS</h2>
-                    <p>
-                      25A, Jalan Kenari 2, Bandar Puchong Jaya,
-                      <br />
-                      47100 Puchong, Selangor.
-                    </p>
+                    <p>25A, Jalan Kenari 2, Bandar Puchong Jaya,<br />47100 Puchong, Selangor.</p>
                   </div>
                   <div className='branch-content'>
                     <h2 className='text-uppercase'>PENANG OFFICE</h2>
-                    <p>
-                      72-3-59, Arena Curve, Jalan Mahsuri,
-                      <br />
-                      11950 Bayan Lepas, Penang.
-                    </p>
+                    <p>72-3-59, Arena Curve, Jalan Mahsuri,<br />11950 Bayan Lepas, Penang.</p>
                     <div className='contact-number d-inline-block '>
                       <p className='d-flex'>
-                        <i className='icon-phone mr-2'></i>
-                        General Line: &nbsp;010-2775678
-                      </p>
+                        <i className='icon-phone mr-2'></i>General Line: &nbsp;010-2775678</p>
                       <p className='d-flex'>
-                        <i className='icon-whatsapp mr-2'></i>
-                        WhatsApp: &nbsp;
+                        <i className='icon-whatsapp mr-2'></i>WhatsApp: &nbsp;
                         <a
                           className='black'
                           href='https://wa.me/60106510906'
