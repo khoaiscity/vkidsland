@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Products() {
   const resourceURL = process.env.REACT_APP_RESOURCE_URL;
@@ -57,7 +57,7 @@ export default function Products() {
             <div className='row'>
               <div className='col-12 col-md-6'>
                 <div className='banner-title text-center text-uppercase'>
-                  <img src='assets/icons/vschool.png' alt='VSCHOOL TREND'/>
+                  <img src='assets/icons/vschool.png' alt='VSCHOOL TREND' />
                   <div className='hw pb-5'></div>
                   <h3>STUDY ANYTIME. ANYWHERE</h3>
                   <p className='banner-caption1 pt-2'>
@@ -107,7 +107,9 @@ export default function Products() {
                 href='https://www.facebook.com/vschooltrend'
                 rel='noopener noreferrer'
                 target='_blank'
-              >Find out more</a>
+              >
+                Find out more
+              </a>
             </div>
             <a
               className='banner-prev carousel-control-prev'
@@ -141,17 +143,40 @@ export default function Products() {
         <div className='container'>
           <div className='row'>
             <div className='col-lg-12'>
-              <div className='explore-header text-center'>
-                <h1 className='text-uppercase'>VSchool Trend Learning Program</h1>
-                <p className='pt-3 pb-5 text-uppercase'>A Brand New and Most Comprehensive Online Learning Programme</p>
-                <p className='pt-3 pb-1' style={{'text-align': 'justify'}}>VKids Trend Sdn. Bhd. does not condone and recognise the legitimacy of any sale of VKids Trend Sdn. Bhd.’s products through e-commerce platforms wherein such platforms are not limited to Shopee, Lazada and etcetera. Pursuant to Section 19A of the Direct Sales and Anti-Pyramid Scheme Act 1993 (“Act”), no person shall supply by sale, or advertise for the supply of, through electronic transaction, any goods or services except in accordance with this Act or the regulation. VKids Trend Sdn. Bhd. does not condone any actions contravening the Act and will not be responsible for any liabilities associated with sales through electronic transactions.</p>
-                <p className='pt-1 pb-5'>Please contact one of our VKids Trend distributors in order to purchase a valid VSchool Trend portal or if you require any further assistance.</p>
+              <div className='explore-header'>
+                <h1 className='text-uppercase'>
+                  VSchool Trend Learning Program
+                </h1>
+                <p className='pt-3 text-uppercase'>
+                  A Brand New and Most Comprehensive Online Learning Programme
+                </p>
                 <a
                   href='https://www.vschooltrend.com'
-                  className='style1-btn px-5 py-3 text-uppercase'
+                  className='style1-btn px-5 py-3 m-2 text-uppercase'
                   rel='noopener noreferrer'
                   target='_blank'
-                >Find Out More</a>
+                >
+                  Find Out More
+                </a>
+                <p className='pt-3 pb-1' style={{ 'text-align': 'justify' }}>
+                  VKids Trend Sdn. Bhd. does not condone and recognise the
+                  legitimacy of any sale of VKids Trend Sdn. Bhd.’s products
+                  through e-commerce platforms wherein such platforms are not
+                  limited to Shopee, Lazada and etcetera. Pursuant to Section
+                  19A of the Direct Sales and Anti-Pyramid Scheme Act 1993
+                  (“Act”), no person shall supply by sale, or advertise for the
+                  supply of, through electronic transaction, any goods or
+                  services except in accordance with this Act or the regulation.
+                  VKids Trend Sdn. Bhd. does not condone any actions
+                  contravening the Act and will not be responsible for any
+                  liabilities associated with sales through electronic
+                  transactions.
+                </p>
+                <p className='pt-1'>
+                  Please contact one of our VKids Trend distributors in order to
+                  purchase a valid VSchool Trend portal or if you require any
+                  further assistance.
+                </p>
               </div>
             </div>
           </div>
