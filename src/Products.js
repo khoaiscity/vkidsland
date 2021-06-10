@@ -152,7 +152,7 @@ export default function Products() {
                 </p>
                 <a
                   href='https://www.vschooltrend.com'
-                  className='style1-btn px-5 py-3 m-2 text-uppercase'
+                  className='style1-btn px-5 py-3 m-5 text-uppercase'
                   rel='noopener noreferrer'
                   target='_blank'
                 >
