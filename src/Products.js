@@ -159,23 +159,10 @@ export default function Products() {
                   Find Out More
                 </a>
                 <p className='pt-3 pb-1' style={{ 'text-align': 'justify' }}>
-                  VKids Trend Sdn. Bhd. does not condone and recognise the
-                  legitimacy of any sale of VKids Trend Sdn. Bhd.’s products
-                  through e-commerce platforms wherein such platforms are not
-                  limited to Shopee, Lazada and etcetera. Pursuant to Section
-                  19A of the Direct Sales and Anti-Pyramid Scheme Act 1993
-                  (“Act”), no person shall supply by sale, or advertise for the
-                  supply of, through electronic transaction, any goods or
-                  services except in accordance with this Act or the regulation.
-                  VKids Trend Sdn. Bhd. does not condone any actions
-                  contravening the Act and will not be responsible for any
-                  liabilities associated with sales through electronic
-                  transactions.
+                    VKids Trend Sdn. Bhd. does not condone and recognise the legitimacy of any sale of VKids Trend Sdn. Bhd.’s products through e-commerce platforms wherein such platforms are not limited to Shopee, Lazada and etcetera. Pursuant to Section 19A of the Direct Sales and Anti-Pyramid Scheme Act 1993 (“Act”), no person shall supply by sale, or advertise for the supply of, through electronic transaction, any goods or services except in accordance with this Act or the regulation. VKids Trend Sdn. Bhd. does not condone any action contravening the Act and will not be responsible for any liability associated with sales through electronic transactions.
                 </p>
                 <p className='pt-1'>
-                  Please contact one of our VKids Trend distributors in order to
-                  purchase a valid VSchool Trend portal or if you require any
-                  further assistance.
+                    Please contact one of our VKids Trend distributors in order to purchase a valid VSchool Trend portal or if you require any further assistance.
                 </p>
               </div>
             </div>
