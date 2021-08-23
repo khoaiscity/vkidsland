@@ -49,22 +49,20 @@ function Footer() {
               <div className='modal-dialog modal-lg'>
                 <div className='modal-content term-modal-content'>
                   <div className='title'>{item.Value.Name}</div>
-                  <div className='content'
-                    dangerouslySetInnerHTML={{
-                      __html: item.Value.Value
-                    }}></div>
+                  <div className='content' dangerouslySetInnerHTML={{__html: item.Value.Value}}></div>
                 </div>
               </div>
             </div>
           ))}
 
-          <div className='col-md-2 col-4'>
+          <div className='col-md-2 col-4' style={{'top': '19px'}}>
             <div className='text-right'>
               <ul className='list-unstyled list-inline'>
                 <li className='list-inline-item'>
                   <a className='btn-floating btn-sm' href='https://www.facebook.com/vkidstrendsb'> <img
-                    className='icon-fb-footer' src='assets/icons/facebook-circular-logo.svg' alt='facebook'/>
-                  </a> {/*<a className='btn-floating btn-sm' href='https://www.facebook.com/vkidstrendsb'> <img*/} {/*  className='icon-fb-footer' src='assets/icons/facebook-circular-logo.svg' alt='facebook'/> </a>*/}
+                    className='icon-fb-footer' src='assets/icons/facebook-circular-logo.svg' alt='facebook'/> </a> <a
+                  className='btn-floating btn-sm' href='https://www.youtube.com/channel/UCG4d6XVAfUctT91blHb5VyQ'> <img
+                  className='icon-fb-footer' src='assets/icons/youtube-circular-logo.svg' alt='youtube'/> </a>
                 </li>
               </ul>
             </div>
