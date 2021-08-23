@@ -519,15 +519,23 @@ footer .reserved {
 }
 
 .term-modal-content .title {
-  padding: 25px 0 0 30px;
+  padding: 20px 0 0 30px;
   color: #000000;
   font-weight: 700;
   font-size: 20px;
+
+  position: fixed;
 }
 
 .term-modal-content .content {
-  padding: 10px 30px 20px 30px;
+  padding: 10px 20px 20px 30px;
   color: #000000;
+
+  position: relative;
+  top: 55px;
+  max-height: 450px;
+  overflow-y: scroll;
+  background-color: white;
 }
 
 .disabled {
