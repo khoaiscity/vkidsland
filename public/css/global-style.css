@@ -518,12 +518,25 @@ footer .reserved {
   padding: 0 60px;
 }
 
+.term-modal-content .title {
+  padding: 25px 0 0 30px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.term-modal-content .content {
+  padding: 10px 30px 20px 30px;
+  color: #000000;
+}
+
 .disabled {
-  cursor: not-allowed !important;   
+  cursor: not-allowed !important;
 }
 
 .error {
   color: #f04134;
   margin: 0;
 }
+
 /* End of global style */

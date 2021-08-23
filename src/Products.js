@@ -144,20 +144,14 @@ export default function Products() {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='explore-header'>
-                <h1 className='text-uppercase'>
-                  VSchool Trend Learning Program
-                </h1>
-                <p className='pt-3 text-uppercase'>
-                  A Brand New and Most Comprehensive Online Learning Programme
-                </p>
+                <h1 className='text-uppercase'>VSchool Trend Learning Program</h1>
+                <p className='pt-3 text-uppercase'>A Brand New and Most Comprehensive Online Learning Programme</p>
                 <a
                   href='https://www.vschooltrend.com'
                   className='style1-btn px-5 py-3 m-5 text-uppercase'
                   rel='noopener noreferrer'
                   target='_blank'
-                >
-                  Find Out More
-                </a>
+                >Find Out More</a>
                 <p className='pt-3 pb-1' style={{ 'text-align': 'justify' }}>
                     VKids Trend Sdn. Bhd. does not condone and recognise the legitimacy of any sale of VKids Trend Sdn. Bhd.’s products through e-commerce platforms wherein such platforms are not limited to Shopee, Lazada and etcetera. Pursuant to Section 19A of the Direct Sales and Anti-Pyramid Scheme Act 1993 (“Act”), no person shall supply by sale, or advertise for the supply of, through electronic transaction, any goods or services except in accordance with this Act or the regulation. VKids Trend Sdn. Bhd. does not condone any action contravening the Act and will not be responsible for any liability associated with sales through electronic transactions.
                 </p>

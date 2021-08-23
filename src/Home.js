@@ -367,9 +367,7 @@ function Home() {
                                     type='button'
                                     className='btn-video green py-3'
                                     data-toggle='modal'
-                                    data-target={
-                                      '.bd-example-modal-lg-' + index
-                                    }
+                                    data-target={'.bd-example-modal-lg-' + index}
                                   >View Video <i className='fa fa-play-circle px-1'></i>
                                   </button>)}
                                 {item.isSliderPhoto && (<button
