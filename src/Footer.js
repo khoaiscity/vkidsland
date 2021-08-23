@@ -30,7 +30,7 @@ function Footer() {
               {term && term.length &&
               term.map((item, index) => (
                 // <button type='button' data-toggle='modal'>{item.Value.Name}</button>
-                <a href='#footer' data-toggle='modal' data-target={'.term-modal-lg-' + index}> <span
+                <a href='' data-toggle='modal' data-target={'.term-modal-lg-' + index}> <span
                   style={{'font-size': '0.8rem', 'white-space': 'nowrap'}} className='px-1'>{item.Value.Name}</span> </a>
               ))
               }
