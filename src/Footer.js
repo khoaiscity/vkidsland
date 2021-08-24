@@ -15,7 +15,7 @@ function Footer() {
 
   useEffect(() => {
     if (term === null) {
-      fetch('api/system-static-setting?type=term-and-conditions&key=privacy&key=code-of-ethics&key=term-of-use&key=income&key=social-media&key=general&key=distributor-rule-and-regulation')
+      fetch('api/system-static-setting?type=term-and-conditions&key=privacy&key=disclaimer&key=code-of-ethics&key=term-of-use&key=income&key=social-media&key=general&key=distributor-rule-and-regulation')
         .then((response) => response.json())
         .then((response) => setTerm(response.data));
     }
