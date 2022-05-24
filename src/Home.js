@@ -357,10 +357,10 @@ function Home() {
                             <div className='bounceInLeft'>
                               <div className='awards-section-content text-center black'>
                                 <div className='py- awards-header'>
-                                  <h5 className='font-weight-bold'>{item.Title}</h5>
+                                  <h5 className='font-weight-bold' style={{'color': '#30FF98'}}>{item.Title}</h5>
                                 </div>
                                 <div className='awards-content'>
-                                  <span>{item.Description}</span>
+                                  <span style={{'color': '#FF5A37'}}>{item.Description}</span>
                                 </div>
                                 {item.Video && (
                                   <button
