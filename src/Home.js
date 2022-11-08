@@ -637,9 +637,8 @@ function Home() {
                   <div className="headquater-content">
                     <h2 className="text-uppercase">HEADQUARTERS</h2>
                     <p>
-                      25A, Jalan Kenari 2, Bandar Puchong Jaya,
-                      <br />
-                      47100 Puchong, Selangor.
+                      No. 38, Jalan BP 6/6, Bandar Bukit Puchong, 47120 Puchong,
+                      Selangor.
                     </p>
                   </div>
                   <div className="branch-content">
